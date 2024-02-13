@@ -1,9 +1,9 @@
-import {  StyleSheet, View, Text, ScrollView, Image, SafeAreaView, TextInput} from 'react-native'
+import {  StyleSheet, View, Text, ScrollView, Image, SafeAreaView, TextInput, Pressable} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import React, { useState } from 'react';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-const Home = () => {
+const Home = ({navigation}) => {
 
     const [searchQuery, setSearchQuery] = useState('');
 
@@ -12,13 +12,14 @@ const Home = () => {
         setSearchQuery(text);
     };
 
+    const onPressItem = (id,name) =>{
+        navigation.navigate('ReviewPage',{id: id,name: name})
+    }
+
   return (
     <SafeAreaView style={styles.container}>
-        <View style={styles.header}>
-            <Text style={styles.title}>Cof Hunter</Text>
-        </View>
         <ScrollView>
-        <View style={{flexDirection: 'row',justifyContent:'center',alignItems:'center',marginTop:60}}>
+        <View style={{flexDirection: 'row',justifyContent:'center',alignItems:'center',marginTop:20}}>
             <TextInput style={styles.input} placeholder="ค้นหาชื่อร้าน" onChangeText={handleSearch}value={searchQuery}/>
             <Icon name="search" size={20} color="#888" style={styles.searchIcon} />
         </View>
@@ -26,8 +27,9 @@ const Home = () => {
             <Text style={styles.HeaderText}>| ร้านดังยอดนิยม</Text>
         </View>
 
-
+        
         <View style={styles.cafeBox}>
+            <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
             <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
                 <Text style={styles.cafeNameText}>Factory Coffee</Text>
                 <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
@@ -39,7 +41,10 @@ const Home = () => {
                 <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
                 <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
             </View>
-        </View>
+            </Pressable>
+        </View>   
+        
+        
 
         <View style={styles.cafeBox}>
             <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
@@ -141,7 +146,6 @@ const styles = StyleSheet.create({
         marginTop:5,
         alignContent:"flex-start"
     },
-
 
     detailText: {
         fontSize: 15,
