@@ -113,24 +113,6 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     },
 
-    header: {
-        position: 'absolute',
-        top: 0,
-        width: '100%',
-        height: 70,
-        paddingTop: 20,
-        paddingStart:15,
-        backgroundColor: "#8E5431",
-        alignItems: 'start',
-        justifyContent: 'center',
-        zIndex: 1000, // Ensure it's on top of other components
-      },
-      title: {
-        color: 'white',
-        fontSize: 20,
-        fontWeight: "bold",
-      },
-
     HeaderText: {
         fontSize: 20,
         fontWeight: "bold",

@@ -28,6 +28,8 @@ const ReviewPage = () => {
   const handleNavigateToDetail = () => {
     navigation.navigate('DetailPage'); }
 
+  const findmoreReccommentMenu = () =>{}
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -63,28 +65,48 @@ const ReviewPage = () => {
         </View>
         <Text style={styles.detailText}>Phayathai Bangkok</Text>
         <TouchableOpacity onPress={handleNavigateToDetail} style={styles.button}>
-          <Text style={styles.buttonText}>ดูรายละเอียด</Text>
+            <Text style={styles.buttonText}>ดูรายละเอียด</Text>
         </TouchableOpacity>
+
+
         <Text style={styles.menuText}>| วิธีในการสกัดกาแฟ</Text>
           <Text style={styles.detailText}>- Espresso Machine</Text>
           <Text style={styles.detailText}>- Drip</Text>
           <Text style={styles.detailText}>- AeroPress</Text>
           <Text style={styles.detailText}>- Cold Brew</Text>
-        <Text style={styles.menuText}>| เมนูแนะนำ</Text>
+
+        <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
+          <Text style={styles.menuText}>| เมนูแนะนำ</Text>
+          <TouchableOpacity onPress={findmoreReccommentMenu} >
+            <Text style={styles.menuText}>ดูทั้งหมด</Text>
+          </TouchableOpacity>
+        </View>
+        
         <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
                 <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
                 <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
                 <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
                 <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
         </View>
-        <Text style={styles.menuText}>| เมล็ดกาแฟที่ใช้</Text>
+        
+        <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
+          <Text style={styles.menuText}>| เมล็ดกาแฟที่ใช้</Text>
+          <TouchableOpacity onPress={findmoreReccommentMenu} >
+            <Text style={styles.menuText}>ดูทั้งหมด</Text>
+          </TouchableOpacity>
+        </View>
         <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
                 <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
                 <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
                 <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
                 <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
         </View>
-        <Text style={styles.menuText}>| เมนูทั้งหมด</Text>
+        <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
+          <Text style={styles.menuText}>| เมนูทั้งหมด</Text>
+          <TouchableOpacity onPress={findmoreReccommentMenu} >
+            <Text style={styles.menuText}>ดูทั้งหมด</Text>
+          </TouchableOpacity>
+        </View>
         <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
                 <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
                 <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
