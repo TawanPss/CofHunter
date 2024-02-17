@@ -28,7 +28,19 @@ const ReviewPage = () => {
   const handleNavigateToDetail = () => {
     navigation.navigate('DetailPage'); }
 
-  const findmoreReccommentMenu = () =>{}
+  const findmoreReccommentMenu = () =>{
+    navigation.navigate('MoreRecommentMenu')
+  }
+
+  const moreBean = () =>{
+    navigation.navigate('MoreBeanPage')
+  }
+
+  const moreMenu = () =>{
+    navigation.navigate('MoreMenuPage')
+  }
+
+
 
   return (
     <SafeAreaView style={styles.container}>
@@ -83,35 +95,35 @@ const ReviewPage = () => {
         </View>
         
         <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof5.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof6.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
         </View>
         
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
           <Text style={styles.menuText}>| เมล็ดกาแฟที่ใช้</Text>
-          <TouchableOpacity onPress={findmoreReccommentMenu} >
+          <TouchableOpacity onPress={moreBean} >
             <Text style={styles.menuText}>ดูทั้งหมด</Text>
           </TouchableOpacity>
         </View>
         <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
         </View>
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
           <Text style={styles.menuText}>| เมนูทั้งหมด</Text>
-          <TouchableOpacity onPress={findmoreReccommentMenu} >
+          <TouchableOpacity onPress={moreMenu} >
             <Text style={styles.menuText}>ดูทั้งหมด</Text>
           </TouchableOpacity>
         </View>
-        <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
+        <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center',marginBottom:30 }}>
+                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof6.png')} style={styles.coverPic} />
         </View>
 
             
@@ -126,7 +138,7 @@ export default ReviewPage
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems:'center'
+    alignItems:'center',
   },
   wrap: {
     marginTop: 2,
