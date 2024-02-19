@@ -1,5 +1,0 @@
-fastapi
-pymongo
-asyncio
-uvicorn
-motor
