@@ -1,0 +1,7 @@
+fastapi
+pymongo
+asyncio
+uvicorn
+motor
+HTTPException
+FileResponse
