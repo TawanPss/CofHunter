@@ -1,20 +1,20 @@
 version: '3.3'
 services:
 
-  coffee_project:
-    build: ./coffee_project
-    container_name: coffee_project
-    command: uvicorn main_cof:app --reload --host 0.0.0.0 --port 8001
+  cof_backend:
+    build: ./cof_backend
+    container_name: cof_backend
+    command: uvicorn main:app --reload --host 0.0.0.0 --port 8001
     volumes:
-      - ./coffee_project/:/app/
+      - ./cof_backend/:/app/
     ports:
       - '8001:8001'
     restart: always
     
-  mongo_db:
+  mongo_db_cof:
     image: mongo
     restart: always
-    container_name: mongo_db
+    container_name: mongo_db_cof
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoadmin
       MONGO_INITDB_ROOT_PASSWORD: mongoadmin

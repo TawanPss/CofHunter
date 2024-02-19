@@ -5,6 +5,9 @@ from pydantic import BaseModel
 from bson import ObjectId
 import random 
 import string
+import datetime
+import os
+import uuid
 
 app = FastAPI()
 
@@ -33,16 +36,17 @@ class Coffee_shop_record(BaseModel):
     Cof_shop_id:str     
     Opening:str
     Location:str
-#   Shop_image:Base64
+    Shop_image:str #URL
+    rating_total:str
 
-    
+
 class Menu_record(BaseModel):
     Cof_shop_id:str
     Order_amount:str
     Menu_name:str
     Description:str
     Coffee_price:str
-#   Coffee_image:Base64
+    Coffee_image:str #URL
     
 class Coffee_bean_record(BaseModel):
     Cof_shop_id:str
@@ -150,6 +154,48 @@ async def record_popular_coffee(dummy_data:Popular_coffee_shop_record):
         return {"msg": "Added successfully", "popular_coffee": str(result.inserted_id)}     
     else:           
         raise HTTPException(status_code=400, detail="Error adding user")
+    
+
+@app.get("/homepage")
+async def homepage():
+    # Get popular coffee shops from database 1 อันก่อน
+    popular_coffee_shops = await collection_pop_cof_shop.find().to_list(length=3)
+    
+    # Get coffee shop details and menu/bean records for each
+    #popular_coffee_shops เก็บใน[]
+    all_coffee_shop_details = []
+    
+    for shop in popular_coffee_shops:
+        #find_one หาcof shop id ตรงกัน (ดึงหมดเลอ)
+        shop_details = await collection_coffee_shop.find_one({"_id": shop["Cof_shop_id"]})
+    # Get all field in collection menus
+     
+        shop_menus = await collection_menu.find({"Cof_shop_id": shop["Cof_shop_id"]}).to_list(length=4)
+
+        #Fix ไว้ 2 collection จะดึงอะไรก็แล้วแต่เลอ
+        all_coffee_shop_details.append({
+            "shop": shop_details,
+            "menus": shop_menus
+        })
+
+    return {"homepage": all_coffee_shop_details}
+
+
+@app.get("/coffeeshop/{shop_id}")
+async def get_coffee_shop(shop_id: str):
+    
+    # Get coffee shop details
+    shop_details = await collection_coffee_shop.find_one({"_id": shop_id})
+    if not shop_details:
+        raise HTTPException(status_code=404, detail="Coffee shop not found")
+
+    # Get menu & coffee bean records
+    shop_menus = await collection_menu.find({"Cof_shop_id": shop_id}).to_list()
+    shop_coffee_beans = await collection_Coffee_bean.find({"Cof_shop_id": shop_id}).to_list()
+
+    return {"coffee_shop": shop_details, "menus": shop_menus, "coffee_beans": shop_coffee_beans} 
+
+
 
 
 # #get image
