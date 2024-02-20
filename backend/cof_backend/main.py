@@ -223,6 +223,18 @@ async def get_coffee_bean(shop_id: str):
     # Return only the "coffee bean" data, assuming this is what you intended
     return {"Coffee_bean_list": shop_coffee_beans}
 
+@app.get("/Shop_detail_page/{shop_id}")
+async def get_Shop_detail_page(shop_id: str):
+    # Get coffee beans items directly, filtering by shop_id
+    shop_detail = await collection_coffee_shop.find({"Cof_shop_id": shop_id}).to_list()
+
+    # Check if any Shop_detail_page items were found
+    if not shop_detail:
+        raise HTTPException(status_code=404, detail="Coffee shop does not have any menu items")
+
+    # Return only the "Shop_detail_page" data, assuming this is what you intended
+    return {"Shop_detail_page": shop_detail}
+
 
 
 
