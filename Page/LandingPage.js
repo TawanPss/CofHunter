@@ -12,7 +12,7 @@ const LandingPage = ({navigation}) => {
         <View style={{height: "100%", alignItems: "center", backgroundColor:"#8E5431"}}>
             <View style={{ flex: 1,justifyContent: "center",alignContent:"center"}}>
                 <Image source={require('../assets/CofHunterLogo.png')}  style={{width:150, height:210}}/>
-                <Text style={{justifyContent: "center",color: "white",fontSize: 30}}>Cof Hunter</Text>
+                <Text style={{justifyContent: "center",color: "white",fontSize: "30px"}}>Cof Hunter</Text>
             </View>
         </View>
     </Pressable>    

@@ -22,7 +22,7 @@ const Home = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
-        <ScrollView style={{paddingBottom:30}}>
+        <ScrollView>
         <View style={{flexDirection: 'row',justifyContent:'center',alignItems:'center',marginTop:20}}>
             <TextInput style={styles.input} placeholder="ค้นหาชื่อร้าน" onChangeText={handleSearch}value={searchQuery}/>
             <Icon name="search" size={20} color="#888" style={styles.searchIcon} />
@@ -40,10 +40,10 @@ const Home = ({navigation}) => {
             </View>
             <Text style={styles.detailText}>Phayathai Bangkok</Text>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
             </View>
             </Pressable>
         </View>   
@@ -51,66 +51,67 @@ const Home = ({navigation}) => {
         
 
         <View style={styles.cafeBox}>
-            <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
             <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
                 <Text style={styles.cafeNameText}>Factory Coffee</Text>
                 <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
             </View>
             <Text style={styles.detailText}>Phayathai Bangkok</Text>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
+<<<<<<< HEAD
                 <Image source={{uri: 'https://drive.google.com/uc?id=1qBS3HIfpmTbyPsWNn1DwFnotkAqVMCT1'}} style={styles.coverPic} />
                 <Image source={{uri: 'https://drive.google.com/uc?id=1HDr2U5AlAELjA7Mt9EPlsElSsxIt8ek2'}} style={styles.coverPic} />
                 <Image source={{uri: 'https://drive.google.com/uc?id=1VFrJeEX3qD8XUXbf3zVMxvem1PUgrqfC'}} style={styles.coverPic} />
                 <Image source={{uri: 'https://drive.google.com/uc?id=1YxP-Cd7iFoIiJ20RcHlfWyArhZ8QAxWi'}} style={styles.coverPic} />
+=======
+                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
+>>>>>>> parent of 833a67e (Version1 Complete Front end,no api)
             </View>
-            </Pressable>
-        </View>   
+        </View>
 
         <View style={styles.cafeBox}>
-            <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
             <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
                 <Text style={styles.cafeNameText}>Factory Coffee</Text>
                 <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
             </View>
             <Text style={styles.detailText}>Phayathai Bangkok</Text>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
             </View>
-            </Pressable>
-        </View>   
+        </View>
 
         <View style={styles.cafeBox}>
-            <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
             <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
                 <Text style={styles.cafeNameText}>Factory Coffee</Text>
                 <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
             </View>
             <Text style={styles.detailText}>Phayathai Bangkok</Text>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
             </View>
-            </Pressable>
-        </View>   
+        </View>
 
         <View style={styles.cafeBox}>
-            <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
             <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
                 <Text style={styles.cafeNameText}>Factory Coffee</Text>
                 <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
             </View>
             <Text style={styles.detailText}>Phayathai Bangkok</Text>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
             </View>
+<<<<<<< HEAD
             </Pressable>
         </View> 
 
@@ -118,6 +119,9 @@ const Home = ({navigation}) => {
             <Text style={styles.menuText}>testapi</Text>
         </TouchableOpacity>  
 
+=======
+        </View>
+>>>>>>> parent of 833a67e (Version1 Complete Front end,no api)
     </ScrollView>
     </SafeAreaView>
 
@@ -127,7 +131,7 @@ const Home = ({navigation}) => {
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        justifyContent:'center',
+        justifyContent:'center'
     },
 
     HeaderText: {
@@ -141,7 +145,7 @@ const styles = StyleSheet.create({
     cafeNameText: {
         fontSize: 20,
         fontWeight: "bold",
-        color: "Black",
+        Colors: "Black",
         marginTop:5,
         alignContent:"flex-start"
     },
@@ -149,14 +153,14 @@ const styles = StyleSheet.create({
     detailText: {
         fontSize: 15,
         fontWeight: "regular",
-        color: "333333",
+        Colors: "333333",
         marginTop:5,
     },
 
     openTimeText:{
         fontSize: 15,
         fontWeight: "regular",
-        color: "#333333",
+        Colors: "#333333",
         marginTop:10,
         alignContent:"flex-end",
         marginEnd:15,

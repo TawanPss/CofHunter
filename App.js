@@ -8,10 +8,13 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Home from './Page/Home';
 import ReviewPage from './Page/ReviewPage';
 import DetailPage from './Page/DetailPage';
+<<<<<<< HEAD
 import MoreRecommentMenu from './Page/MoreRecommentMenu';
 import MoreBeanPage from './Page/MoreBeanPage';
 import MoreMenuPage from './Page/MoreMenuPage';
 import testapi from './Page/testapi';
+=======
+>>>>>>> parent of 833a67e (Version1 Complete Front end,no api)
 
 const Stack = createNativeStackNavigator();
 
@@ -47,7 +50,7 @@ const App = () => {
         headerTitleStyle: {fontWeight: 'bold',},
         headerLeft: () => (
           <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Icon name="angle-left" size={30} style={{ marginLeft: 10, color:"white"}} />
+            <Icon name="angle-left" size={20} style={{ marginLeft: 10, color:"white"}} />
           </TouchableOpacity>
         ),
       })}
@@ -62,59 +65,10 @@ const App = () => {
         headerTitleStyle: {fontWeight: 'bold',},
         headerLeft: () => (
           <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Icon name="angle-left" size={30} style={{ marginLeft: 10, color:"white"}} />
+            <Icon name="angle-left" size={20} style={{ marginLeft: 10, color:"white"}} />
           </TouchableOpacity>
         ),
       })}
-
-      />
-
-      <Stack.Screen 
-      name='MoreRecommentMenu' 
-      component={MoreRecommentMenu}
-      options={({ navigation }) => ({
-        headerTitle: 'Recomment Menu',
-        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
-        headerTitleStyle: {fontWeight: 'bold',},
-        headerLeft: () => (
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Icon name="angle-left" size={30} style={{ marginLeft: 10, color:"white"}} />
-          </TouchableOpacity>
-        ),
-      })}
-
-      />
-
-      <Stack.Screen 
-      name='MoreBeanPage' 
-      component={MoreBeanPage}
-      options={({ navigation }) => ({
-        headerTitle: 'All of Coffee Bean',
-        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
-        headerTitleStyle: {fontWeight: 'bold',},
-        headerLeft: () => (
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Icon name="angle-left" size={30} style={{ marginLeft: 10, color:"white"}} />
-          </TouchableOpacity>
-        ),
-      })}
-
-      />
-
-      <Stack.Screen 
-      name='MoreMenuPage' 
-      component={MoreMenuPage}
-      options={({ navigation }) => ({
-        headerTitle: 'All Menu',
-        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
-        headerTitleStyle: {fontWeight: 'bold',},
-        headerLeft: () => (
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Icon name="angle-left" size={30} style={{ marginLeft: 10, color:"white"}} />
-          </TouchableOpacity>
-        ),
-      })}
-
       />
 
       <Stack.Screen 
