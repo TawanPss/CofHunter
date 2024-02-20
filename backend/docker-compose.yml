@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+
+  cof_backend:
+    build: ./cof_backend
+    container_name: cof_backend
+    command: uvicorn main:app --reload --host 0.0.0.0 --port 8001
+    volumes:
+      - ./cof_backend/:/app/
+    ports:
+      - '8001:8001'
+    restart: always
+    
+  mongo_db_cof:
+    image: mongo
+    restart: always
+    container_name: mongo_db_cof
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: mongoadmin
+    ports:
+      - "27017:27017"  
