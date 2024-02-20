@@ -67,7 +67,7 @@ class Review_record(BaseModel):
     rating:str
     rating_id:str
     comment:str
-    last_comment:datetime
+    # last_comment:datetime
     
 class Popular_coffee_shop_record(BaseModel):
     Cof_shop_id:str
