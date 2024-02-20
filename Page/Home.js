@@ -1,7 +1,7 @@
-import {  StyleSheet, View, Text, ScrollView, Image, SafeAreaView, TextInput, Pressable,TouchableOpacity} from 'react-native'
+import {  StyleSheet, View, Text, ScrollView, Image, SafeAreaView, TextInput, Pressable} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import React, { useState, useEffect } from 'react';
-
+import React, { useState } from 'react';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const Home = ({navigation}) => {
 
@@ -14,10 +14,6 @@ const Home = ({navigation}) => {
 
     const onPressItem = (id,name) =>{
         navigation.navigate('ReviewPage',{id: id,name: name})
-    }
-
-    const testapi = () =>{
-        navigation.navigate('testapi')
     }
 
   return (
@@ -58,6 +54,7 @@ const Home = ({navigation}) => {
             <Text style={styles.detailText}>Phayathai Bangkok</Text>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Image source={{uri: 'https://drive.google.com/uc?id=1qBS3HIfpmTbyPsWNn1DwFnotkAqVMCT1'}} style={styles.coverPic} />
                 <Image source={{uri: 'https://drive.google.com/uc?id=1HDr2U5AlAELjA7Mt9EPlsElSsxIt8ek2'}} style={styles.coverPic} />
                 <Image source={{uri: 'https://drive.google.com/uc?id=1VFrJeEX3qD8XUXbf3zVMxvem1PUgrqfC'}} style={styles.coverPic} />
@@ -68,6 +65,12 @@ const Home = ({navigation}) => {
                 <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
                 <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
 >>>>>>> parent of 833a67e (Version1 Complete Front end,no api)
+=======
+                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
+>>>>>>> parent of d824863 (test fetch data to front end)
             </View>
         </View>
 
@@ -113,6 +116,7 @@ const Home = ({navigation}) => {
             </View>
 <<<<<<< HEAD
             </Pressable>
+<<<<<<< HEAD
         </View> 
 
         <TouchableOpacity onPress={testapi} >
@@ -122,6 +126,9 @@ const Home = ({navigation}) => {
 =======
         </View>
 >>>>>>> parent of 833a67e (Version1 Complete Front end,no api)
+=======
+        </View>   
+>>>>>>> parent of d824863 (test fetch data to front end)
     </ScrollView>
     </SafeAreaView>
 
