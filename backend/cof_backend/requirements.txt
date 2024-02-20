@@ -3,3 +3,4 @@ pymongo
 asyncio
 uvicorn
 motor
+pydantic
