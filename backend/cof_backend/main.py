@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException      
 from pymongo import MongoClient
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel
@@ -42,26 +42,27 @@ class Coffee_shop_record(BaseModel):
 
 class Menu_record(BaseModel):
     Cof_shop_id:str
-    Order_amount:str
+    # Order_amount:str
     Menu_name:str
     Description:str
     Coffee_price:str
-    Coffee_image:str #URL
+    # Coffee_image:str #URL
     
 class Coffee_bean_record(BaseModel):
     Cof_shop_id:str
-    Name:str
+    bean_name:str
     price:str
     weigth:str
-    Origin:str
+    Process:str
+    origin:str
     Varieties:str
     Altitude:str
     Tasting_Notes:str
     Recommend:str
     
-class Review_record(BaseModel):
-    Cof_shop_id:str
-    Cof_shop_name:str     
+class Review_record(BaseModel):    
+    Cof_shop_name:str
+    Cof_shop_id:str     
     User_id:str
     rating:str
     rating_id:str
@@ -156,7 +157,7 @@ async def record_popular_coffee(dummy_data:Popular_coffee_shop_record):
         raise HTTPException(status_code=400, detail="Error adding user")
     
 
-@app.get("/homepage")
+@app.get("/Homepage")
 async def homepage():
     # Get popular coffee shops from database 1 อันก่อน
     popular_coffee_shops = await collection_pop_cof_shop.find().to_list(length=3)
@@ -178,10 +179,10 @@ async def homepage():
             "menus": shop_menus
         })
 
-    return {"homepage": all_coffee_shop_details}
+    return {"Homepage": all_coffee_shop_details}
 
 
-@app.get("/coffeeshop/{shop_id}")
+@app.get("/Coffeeshop_page/{shop_id}")
 async def get_coffee_shop(shop_id: str):
     
     # Get coffee shop details
@@ -193,7 +194,34 @@ async def get_coffee_shop(shop_id: str):
     shop_menus = await collection_menu.find({"Cof_shop_id": shop_id}).to_list()
     shop_coffee_beans = await collection_Coffee_bean.find({"Cof_shop_id": shop_id}).to_list()
 
-    return {"coffee_shop": shop_details, "menus": shop_menus, "coffee_beans": shop_coffee_beans} 
+    return {"Coffeeshop_page": shop_details, "menus": shop_menus, "coffee_beans": shop_coffee_beans} 
+
+@app.get("/Menu_list/{shop_id}")
+async def get_menu(shop_id: str):
+
+
+    # Get menu items directly, filtering by shop_id
+    shop_menus = await collection_menu.find({"Cof_shop_id": shop_id}).to_list()
+
+    # Check if any menu items were found
+    if not shop_menus:
+        raise HTTPException(status_code=404, detail="Coffee shop does not have any menu items")
+
+    # Return only the "menus" data, assuming this is what you intended
+    return {"Menu_list": shop_menus}
+
+
+@app.get("/Coffee_bean_list/{shop_id}")
+async def get_coffee_bean(shop_id: str):
+    # Get coffee beans items directly, filtering by shop_id
+    shop_coffee_beans = await collection_Coffee_bean.find({"Cof_shop_id": shop_id}).to_list()
+
+    # Check if any menu items were found
+    if not shop_coffee_beans:
+        raise HTTPException(status_code=404, detail="Coffee shop does not have any menu items")
+
+    # Return only the "coffee bean" data, assuming this is what you intended
+    return {"Coffee_bean_list": shop_coffee_beans}
 
 
 
