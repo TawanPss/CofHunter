@@ -11,7 +11,7 @@ import DetailPage from './Page/DetailPage';
 import MoreRecommentMenu from './Page/MoreRecommentMenu';
 import MoreBeanPage from './Page/MoreBeanPage';
 import MoreMenuPage from './Page/MoreMenuPage';
-import testapi from './Page/testapi';
+import Testapi from './Page/Testapi';
 
 const Stack = createNativeStackNavigator();
 
@@ -118,8 +118,8 @@ const App = () => {
       />
 
       <Stack.Screen 
-      name='testapi' 
-      component={testapi}
+      name='Testapi' 
+      component={Testapi}
       options={({ navigation }) => ({
         headerTitle: 'test api',
         headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',

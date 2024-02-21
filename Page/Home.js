@@ -5,28 +5,18 @@ import React, { useState, useEffect } from 'react';
 
 const Home = ({navigation}) => {
 
-    const [searchQuery, setSearchQuery] = useState('');
-
-    const handleSearch = (text) => {
-        // Handle search logic here
-        setSearchQuery(text);
-    };
 
     const onPressItem = (id,name) =>{
         navigation.navigate('ReviewPage',{id: id,name: name})
     }
 
     const testapi = () =>{
-        navigation.navigate('testapi')
+        navigation.navigate('Testapi')
     }
 
   return (
     <SafeAreaView style={styles.container}>
         <ScrollView style={{paddingBottom:30}}>
-        <View style={{flexDirection: 'row',justifyContent:'center',alignItems:'center',marginTop:20}}>
-            <TextInput style={styles.input} placeholder="ค้นหาชื่อร้าน" onChangeText={handleSearch}value={searchQuery}/>
-            <Icon name="search" size={20} color="#888" style={styles.searchIcon} />
-        </View>
         <View>
             <Text style={styles.HeaderText}>| ร้านดังยอดนิยม</Text>
         </View>
@@ -36,7 +26,7 @@ const Home = ({navigation}) => {
             <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
             <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
                 <Text style={styles.cafeNameText}>Factory Coffee</Text>
-                <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
+                <Text style={styles.openTimeText}>Open 8.30-16.30</Text>
             </View>
             <Text style={styles.detailText}>Phayathai Bangkok</Text>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
@@ -47,16 +37,46 @@ const Home = ({navigation}) => {
             </View>
             </Pressable>
         </View>   
-        
-        
 
         <View style={styles.cafeBox}>
             <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
             <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={styles.cafeNameText}>Factory Coffee</Text>
-                <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
+                <Text style={styles.cafeNameText}>GIM Brewing Room</Text>
+                <Text style={styles.openTimeText}>Open 9.30-16.30</Text>
             </View>
-            <Text style={styles.detailText}>Phayathai Bangkok</Text>
+            <Text style={styles.detailText}>Pattaya Chonburi</Text>
+            <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
+                <Image source={require('../assets/GIMMenu1.png')} style={styles.coverPic} />
+                <Image source={require('../assets/GIMMenu2.png')} style={styles.coverPic} />
+                <Image source={require('../assets/GIMMenu3.png')} style={styles.coverPic} />
+                <Image source={require('../assets/GIMMenu4.png')} style={styles.coverPic} />
+            </View>
+            </Pressable>
+        </View>   
+
+        <View style={styles.cafeBox}>
+            <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+            <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
+                <Text style={styles.cafeNameText}>After Peace</Text>
+                <Text style={styles.openTimeText}>Open 10.00-17.30</Text>
+            </View>
+            <Text style={styles.detailText}>Thammasat Rangsit</Text>
+            <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
+                <Image source={require('../assets/AfterPeaceMenu1.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/AfterPeaceMenu2.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/AfterPeaceMenu3.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/AfterPeaceMenu4.jpg')} style={styles.coverPic} />
+            </View>
+            </Pressable>
+        </View>   
+
+        <View style={styles.cafeBox}>
+            <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+            <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
+                <Text style={styles.cafeNameText}>Surya Coffee</Text>
+                <Text style={styles.openTimeText}>Open 7.00-17.30</Text>
+            </View>
+            <Text style={styles.detailText}>Ramkhamhaeng Bangkok</Text>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
                 <Image source={{uri: 'https://drive.google.com/uc?id=1qBS3HIfpmTbyPsWNn1DwFnotkAqVMCT1'}} style={styles.coverPic} />
                 <Image source={{uri: 'https://drive.google.com/uc?id=1HDr2U5AlAELjA7Mt9EPlsElSsxIt8ek2'}} style={styles.coverPic} />
@@ -64,58 +84,26 @@ const Home = ({navigation}) => {
                 <Image source={{uri: 'https://drive.google.com/uc?id=1YxP-Cd7iFoIiJ20RcHlfWyArhZ8QAxWi'}} style={styles.coverPic} />
             </View>
             </Pressable>
-        </View>   
+        </View> 
 
         <View style={styles.cafeBox}>
             <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
             <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={styles.cafeNameText}>Factory Coffee</Text>
-                <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
+                <Text style={styles.cafeNameText}>Suntime Craft Cof</Text>
+                <Text style={styles.openTimeText}>Open 8.30-15.30</Text>
             </View>
-            <Text style={styles.detailText}>Phayathai Bangkok</Text>
+            <Text style={styles.detailText}>Sriracha Chonburi</Text>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
-            </View>
-            </Pressable>
-        </View>   
-
-        <View style={styles.cafeBox}>
-            <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
-            <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={styles.cafeNameText}>Factory Coffee</Text>
-                <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
-            </View>
-            <Text style={styles.detailText}>Phayathai Bangkok</Text>
-            <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
-            </View>
-            </Pressable>
-        </View>   
-
-        <View style={styles.cafeBox}>
-            <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
-            <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={styles.cafeNameText}>Factory Coffee</Text>
-                <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
-            </View>
-            <Text style={styles.detailText}>Phayathai Bangkok</Text>
-            <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
+                <Image source={require('../assets/SuntimeMenu1.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/SuntimeMenu2.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/SuntimeMenu3.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/SuntimeMenu4.jpg')} style={styles.coverPic} />
             </View>
             </Pressable>
         </View> 
 
         <TouchableOpacity onPress={testapi} >
-            <Text style={styles.menuText}>testapi</Text>
+            <Text style={styles.menuText}></Text>
         </TouchableOpacity>  
 
     </ScrollView>
@@ -141,7 +129,7 @@ const styles = StyleSheet.create({
     cafeNameText: {
         fontSize: 20,
         fontWeight: "bold",
-        color: "Black",
+        color: "#000000",
         marginTop:5,
         alignContent:"flex-start"
     },
@@ -149,7 +137,7 @@ const styles = StyleSheet.create({
     detailText: {
         fontSize: 15,
         fontWeight: "regular",
-        color: "333333",
+        color: "#333333",
         marginTop:5,
     },
 

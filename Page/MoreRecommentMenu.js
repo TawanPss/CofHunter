@@ -9,20 +9,24 @@ const MoreRecommentMenu = () => {
           <View style={styles.menuBox}>
             <Image source={require('../assets/FacCof1.png')} style={styles.coverPic}></Image>
             <Text style={styles.MenuNameText}>Phayathai</Text>
+            <Text style={styles.detailText}>150 Baht</Text>
           </View>
           <View style={styles.menuBox}>
             <Image source={require('../assets/FacCof2.png')} style={styles.coverPic}></Image>
             <Text style={styles.MenuNameText}>White Citrus</Text>
+            <Text style={styles.detailText}>120 Baht</Text>
           </View>
         </View>
         <View style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center',marginTop:15}}>
           <View style={styles.menuBox}>
-            <Image source={require('../assets/FacCof1.png')} style={styles.coverPic}></Image>
-            <Text style={styles.MenuNameText}>Phayathai</Text>
+            <Image source={require('../assets/FacCof3.png')} style={styles.coverPic}></Image>
+            <Text style={styles.MenuNameText}>El Brown</Text>
+            <Text style={styles.detailText}>150 Baht</Text>
           </View>
           <View style={styles.menuBox}>
-            <Image source={require('../assets/FacCof2.png')} style={styles.coverPic}></Image>
-            <Text style={styles.MenuNameText}>White Citrus</Text>
+            <Image source={require('../assets/FacCof4.png')} style={styles.coverPic}></Image>
+            <Text style={styles.MenuNameText}>Honolulu</Text>
+            <Text style={styles.detailText}>130 Baht</Text>
           </View>
         </View>
 
@@ -42,7 +46,7 @@ const styles = StyleSheet.create({
   detailText: {
     fontSize: 15,
     fontWeight: "regular",
-    color: "333333",
+    color: "#333333",
     marginTop:5,
     alignSelf:"flex-start",
 },
@@ -56,7 +60,7 @@ const styles = StyleSheet.create({
   MenuNameText: {
     fontSize: 20,
     fontWeight: "bold",
-    color: "Black",
+    color: "#000000",
     marginTop:5,
     alignSelf:"flex-start"
 },
@@ -64,7 +68,7 @@ const styles = StyleSheet.create({
   menuBox:{
     alignItems: 'center' ,
     width:'48%',
-    height:230,
+    height:270,
     marginStart:0,
     marginEnd:0,
     borderColor:"#D9D9D9",

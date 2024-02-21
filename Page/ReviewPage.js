@@ -3,10 +3,10 @@ import React ,{useState,useEffect} from 'react'
 import { useNavigation } from '@react-navigation/native';
 
 const images = [
-  require('../assets/FactorycoffeeBuilding.jpg'),
-  require('../assets/Factorycoffeemenu1.jpg'),
-  require('../assets/Factorycoffeemenu2.jpg'),
-  require('../assets/FactorycoffeeDessert.jpg')
+  require('../assets/FC1.jpg'),
+  require('../assets/FC2.jpg'),
+  require('../assets/FC3.jpg'),
+  require('../assets/FC4.jpg')
 ]
 
 const WIDTH = Dimensions.get('window').width;
@@ -76,9 +76,6 @@ const ReviewPage = () => {
           <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
         </View>
         <Text style={styles.detailText}>Phayathai Bangkok</Text>
-        <TouchableOpacity onPress={handleNavigateToDetail} style={styles.button}>
-            <Text style={styles.buttonText}>ดูรายละเอียด</Text>
-        </TouchableOpacity>
 
 
         <Text style={styles.menuText}>| วิธีในการสกัดกาแฟ</Text>
@@ -108,10 +105,10 @@ const ReviewPage = () => {
           </TouchableOpacity>
         </View>
         <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
+                <Image source={require('../assets/FCB1.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FCB2.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FCB3.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FCB4.jpg')} style={styles.coverPic} />
         </View>
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
           <Text style={styles.menuText}>| เมนูทั้งหมด</Text>
@@ -144,7 +141,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
     borderRadius:10,
     width: WIDTH*0.9,
-    height: HEIGHT*0.6,
+    height: HEIGHT*0.5,
   },
   wrapdot:{
     position:'absolute',
@@ -154,7 +151,7 @@ const styles = StyleSheet.create({
   },
   dotActive:{
     margin: 3,
-    color: 'black'
+    color: '#000000'
   },
   dot:{
     margin: 3,
@@ -163,7 +160,7 @@ const styles = StyleSheet.create({
   cafeNameText: {
     fontSize: 20,
     fontWeight: "bold",
-    color: "Black",
+    color: "#000000",
     marginTop:5,
     alignContent:"flex-start"
 },
@@ -184,13 +181,13 @@ coverPic:{
 detailText: {
   fontSize: 15,
   fontWeight: "regular",
-  Colors: "333333",
+  color: "#333333",
   marginTop:5,
 },
 menuText:{
   fontSize: 15,
   fontWeight: "bold",
-  Colors: "333333",
+  color: "#333333",
   marginTop:10,
 },
 button: {

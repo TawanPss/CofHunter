@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     cafeNameText: {
         fontSize: 20,
         fontWeight: "bold",
-        color: "Black",
+        color: "#000000",
         marginTop:5,
         marginStart:15,
         alignContent:"flex-start"
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     detailText: {
         fontSize: 15,
         fontWeight: "regular",
-        Colors: "#333333",
+        color: "#333333",
         marginStart:15,
         marginTop:5,
       },
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     headerText:{
         fontSize: 15,
         fontWeight: "bold",
-        Colors: "#505050",
+        color: "#505050",
         marginStart:15,
         marginTop:20, 
     }
