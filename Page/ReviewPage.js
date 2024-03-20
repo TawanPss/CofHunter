@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View,SafeAreaView,ScrollView,StatusBar, Dimensions,Image,TouchableOpacity } from 'react-native'
-import React ,{useState,useEffect} from 'react'
 import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react';
+import { Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const images = [
   require('../assets/FC1.jpg'),
@@ -79,10 +79,13 @@ const ReviewPage = () => {
 
 
         <Text style={styles.menuText}>| วิธีในการสกัดกาแฟ</Text>
-          <Text style={styles.detailText}>- Espresso Machine</Text>
-          <Text style={styles.detailText}>- Drip</Text>
-          <Text style={styles.detailText}>- AeroPress</Text>
-          <Text style={styles.detailText}>- Cold Brew</Text>
+        <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
+                <Image source={require('../assets/drip.png')} style={styles.coverPic} />
+                <Image source={require('../assets/aeropess.png')} style={styles.coverPic} />
+                <Image source={require('../assets/coldbrew.png')} style={styles.coverPic} />
+                <Image source={require('../assets/machine.png')} style={styles.coverPic} />
+        </View>
+          
 
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
           <Text style={styles.menuText}>| เมนูแนะนำ</Text>

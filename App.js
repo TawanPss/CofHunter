@@ -1,17 +1,18 @@
-import React from 'react'
-import { View, Text ,TouchableOpacity} from 'react-native'
-import LandingPage from './Page/LandingPage'
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import { useEffect, useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import { Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Home from './Page/Home';
-import ReviewPage from './Page/ReviewPage';
+import AllBlog from './Page/AllBlog';
 import DetailPage from './Page/DetailPage';
-import MoreRecommentMenu from './Page/MoreRecommentMenu';
+import Home from './Page/Home';
+import LandingPage from './Page/LandingPage';
 import MoreBeanPage from './Page/MoreBeanPage';
 import MoreMenuPage from './Page/MoreMenuPage';
-import Testapi from './Page/Testapi';
+import MoreRecommentMenu from './Page/MoreRecommentMenu';
+import ReviewPage from './Page/ReviewPage';
+import Blog1 from './Page/Blog1';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -118,10 +119,10 @@ const App = () => {
       />
 
       <Stack.Screen 
-      name='Testapi' 
-      component={Testapi}
+      name='AllBlog' 
+      component={AllBlog}
       options={({ navigation }) => ({
-        headerTitle: 'test api',
+        headerTitle: 'Cof Hunter Blog',
         headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
         headerTitleStyle: {fontWeight: 'bold',},
         headerLeft: () => (
@@ -129,8 +130,27 @@ const App = () => {
             <Icon name="angle-left" size={30} style={{ marginLeft: 10, color:"white"}} />
           </TouchableOpacity>
         ),
-      })} 
+      })}
+
       />
+
+      <Stack.Screen
+      name='Blog1'
+      component={Blog1}
+      options={({ navigation }) => ({
+        headerTitle: '',
+        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
+        headerTitleStyle: {fontWeight: 'bold',},
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Icon name="angle-left" size={30} style={{ marginLeft: 10, color:"white"}} />
+          </TouchableOpacity>
+        ),
+      })}
+
+      />
+
+
     </Stack.Navigator>
   </NavigationContainer>
   )
