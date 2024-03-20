@@ -46,7 +46,7 @@ return (
         <View style={styles.searchBox}>
             <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
                 <Text style={styles.searhText}>ค้นหาชื่อร้าน,เมนู,สถานที่</Text>
-                <Icon name="access-time" size={13} style={{ marginRight: 15, color: "grey" }} />
+                <Icon name="search" size={13} style={{ marginRight: 15, color: "grey" }} />
                 
             </View>
         </View>
@@ -83,7 +83,7 @@ return (
             <Text style={styles.cafeNameText}>Factory Coffee</Text>
             <Text style={styles.detailText}>Phayathai Bangkok</Text>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Icon name="access-time" size={13} style={{ marginLeft: 5, color: "grey" }} />
+                <Icon name="access-time" size={14} style={{ marginLeft: 5,marginTop:2, color: "grey" }} />
                 <Text style={styles.openTimeText}>Open 8.30-16.30</Text>
                 </View>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
@@ -100,7 +100,7 @@ return (
             <Text style={styles.cafeNameText}>GIM Brewing Room</Text>
             <Text style={styles.detailText}>Pattaya Chonburi</Text>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Icon name="access-time" size={13} style={{ marginLeft: 5, color: "grey" }} />
+                <Icon name="access-time" size={13} style={{ marginLeft: 5, marginTop:2,color: "grey" }} />
                 <Text style={styles.openTimeText}>Open 9.30-16.30</Text>
                 </View>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
@@ -117,7 +117,7 @@ return (
             <Text style={styles.cafeNameText}>After Peace</Text>
             <Text style={styles.detailText}>Thammasat Rangsit</Text>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Icon name="access-time" size={13} style={{ marginLeft: 5, color: "grey" }} />
+                <Icon name="access-time" size={13} style={{ marginLeft: 5,marginTop:2, color: "grey" }} />
                 <Text style={styles.openTimeText}>Open 10.00-17.30</Text>
                 </View>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
@@ -135,7 +135,7 @@ return (
             <Text style={styles.cafeNameText}>Surya Coffee</Text>
             <Text style={styles.detailText}>Ramkhamhaeng Bangkok</Text>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Icon name="access-time" size={13} style={{ marginLeft: 5, color: "grey" }} />
+                <Icon name="access-time" size={13} style={{ marginLeft: 5,marginTop:2, color: "grey" }} />
                 <Text style={styles.openTimeText}>Open 7.00-17.30</Text>
                 </View>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
@@ -152,7 +152,7 @@ return (
             <Text style={styles.cafeNameText}>Suntime Craft Cof</Text>
             <Text style={styles.detailText}>Sriracha Chonburi</Text>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Icon name="access-time" size={13} style={{ marginLeft: 5, color: "grey" }} />
+                <Icon name="access-time" size={13} style={{ marginLeft: 5,marginTop:2, color: "grey" }} />
                 <Text style={styles.openTimeText}>Open 8.30-15.30</Text>
                 </View>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
