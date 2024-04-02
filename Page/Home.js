@@ -162,7 +162,7 @@ return (
                 <Image source={require('../assets/SuntimeMenu4.jpg')} style={styles.coverPic} />
             </View>
             </Pressable>
-        </View> 
+        </View>
 
         <TouchableOpacity onPress={testapi} >
             <Text style={styles.menuText}></Text>
@@ -170,8 +170,7 @@ return (
 
     </ScrollView>
     </SafeAreaView>
-
-  )
+    )
 }
 
 
