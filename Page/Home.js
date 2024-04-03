@@ -43,13 +43,20 @@ return (
     <SafeAreaView style={styles.container}>
         <ScrollView style={{paddingBottom:30}}>
 
-        <View style={styles.searchBox}>
-            <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
+        
+        <View style={styles.HeaderBox}>
+            <Text style={styles.HeaderNameText}>Hi ! Cof hunt , what cof you hunt today !</Text>
+            <View style={styles.searchBox}>
+            <View style={{flexDirection: 'row', alignItems: 'center' }}>
+                <Icon name="search" size={20} style={{ marginTop:3,marginStart:10, color: "grey" }} />
                 <Text style={styles.searhText}>ค้นหาชื่อร้าน,เมนู,สถานที่</Text>
-                <Icon name="search" size={13} style={{ marginRight: 15, color: "grey" }} />
+            </View>
+                
                 
             </View>
         </View>
+
+        
 
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
             <Text style={styles.HeaderText}>| Cof Recomment</Text>
@@ -77,23 +84,115 @@ return (
             <Text style={styles.HeaderText}>| ร้านดังยอดนิยม</Text>
         </View>
 
-    
-        <View style={styles.cafeBox}>
-            <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
-            <Text style={styles.cafeNameText}>Factory Coffee</Text>
-            <Text style={styles.detailText}>Phayathai Bangkok</Text>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Icon name="access-time" size={14} style={{ marginLeft: 5,marginTop:2, color: "grey" }} />
-                <Text style={styles.openTimeText}>Open 8.30-16.30</Text>
+        <View style={styles.container}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <View style={styles.rowContainer}>
+                <View style={styles.CoffeeBox}>
+                    <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                    </View>
+                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    </Pressable>
                 </View>
-            <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
+                <View style={styles.CoffeeBox}>
+                    <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                    </View>
+                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    </Pressable>
+                </View>
+                <View style={styles.CoffeeBox}>
+                    <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                    </View>
+                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    </Pressable>
+                </View>
+                <View style={styles.CoffeeBox}>
+                    <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                    </View>
+                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    </Pressable>
+                </View>
+
+                <View style={styles.CoffeeBox}>
+                    <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                    </View>
+                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    </Pressable>
+                </View>
+
+            
             </View>
-            </Pressable>
+            </ScrollView>
         </View>
+
+
+        <View>
+            <Text style={styles.HeaderText}>| ร้านใกล้คุณ !</Text>
+        </View>
+
+        <View style={styles.container}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <View style={styles.rowContainer}>
+                <View style={styles.CoffeeBox}>
+                    <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                    </View>
+                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    </Pressable>
+                </View>
+                <View style={styles.CoffeeBox}>
+                    <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                    </View>
+                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    </Pressable>
+                </View>
+                <View style={styles.CoffeeBox}>
+                    <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                    </View>
+                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    </Pressable>
+                </View>
+                <View style={styles.CoffeeBox}>
+                    <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                    </View>
+                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    </Pressable>
+                </View>
+
+                <View style={styles.CoffeeBox}>
+                    <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                    </View>
+                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    </Pressable>
+                </View>
+
+            
+            </View>
+            </ScrollView>
+        </View>
+
+        <View style={styles.line}></View>
+
+
+
 
         <View style={styles.cafeBox}>
             <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
@@ -181,6 +280,25 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems: 'center',
     },
+    HeaderBox:{
+        borderColor:"#8E5431",
+        backgroundColor: "#8E5431",
+        width: "100%",
+        height: 120,
+        borderWidth:2,
+        borderBottomLeftRadius: 30,
+        borderBottomRightRadius: 30,
+        paddingStart:10,
+        paddingTop:10,
+        paddingBottom:15,
+    },
+    HeaderText: {
+        fontSize: 13,
+        fontWeight: "bold",
+        color: "#8E5431" ,
+        marginStart:15,
+        marginTop:10,
+    },
     blogslide:{
         width :"100%",
         justifyContent:'center',
@@ -190,12 +308,24 @@ const styles = StyleSheet.create({
         //height: HEIGHT * 0.5,
     },
 
-    HeaderText: {
-        fontSize: 13,
+    HeaderNameText: {
+        fontSize: 15,
         fontWeight: "bold",
-        color: "#8E5431" ,
-        marginStart:15,
-        marginTop:10,
+        color: "#FFFFFF" ,
+        marginTop:5,
+        marginStart:15
+
+       
+    },
+    line:{
+        borderColor:"#D9D9D9",
+        backgroundColor:"#D9D9D9",
+        width:375,
+        borderWidth:3,
+        marginTop:15,
+        
+       
+
     },
 
     BlogText:{
@@ -213,6 +343,15 @@ const styles = StyleSheet.create({
         marginTop:5,
         marginStart:5,
         alignContent:"flex-start"
+    },
+    CoffeeNameText: {
+        fontSize: 10,
+        fontWeight: "bold",
+        color: "#000000",
+        marginTop:10,
+        //marginStart:10,
+        textAlign:"center"
+        //alignContent:"flex-start"
     },
 
     detailText: {
@@ -238,35 +377,48 @@ const styles = StyleSheet.create({
         fontSize: 10,
         fontWeight: "regular",
         color: "#333333",
-        marginTop:-1,
+        marginTop:3,
         marginStart:5,
-        alignContent:"flex-end",
+        
         
     },
 
     cafeBox:{
         borderColor:"#D9D9D9",
-        width: "90%",
-        borderWidth:2,
-        marginTop:15,
-        marginStart:15,
-        marginEnd:15,
-        borderRadius:20,
+        width:375,
+        borderWidth:0.5,
+        //marginTop:5,
+        //marginStart:15,
+        //marginEnd:15,
+        //borderRadius:20,
         paddingStart:10,
         paddingTop:10,
         paddingBottom:15,
     },
-    searchBox:{
-        borderColor:"#D9D9D9",
-        width: "92%",
-        height: "3%",
-        borderWidth:1,
+    CoffeeBox:{
+        flex:1,
+        borderColor:"#FFFFFF",
+        backgroundColor:"#FFFFFF",
+        width:100,
+        height:135,
         marginTop:15,
+        marginStart:15,
+        marginEnd:-10,
+        borderRadius:15,
+        
+    },
+    searchBox:{
+        borderColor:"#FFFFFF",
+        backgroundColor:"#FFFFFF",
+        width: "90%",
+        height: "35%",
+        borderWidth:1,
+        marginTop:30,
         marginStart:15,
         marginEnd:15,
         borderRadius:20,
-        paddingStart:10,
-        paddingTop:10,
+        paddingStart:5,
+        paddingTop:4,
         
     },
 
@@ -277,6 +429,14 @@ const styles = StyleSheet.create({
         marginStart:5,
         marginEnd:15,
         borderRadius:5,
+    },
+    CoffeePic:{
+        width:"99%",
+        height:100,
+       // marginTop:-10,
+        //marginStart:1,
+        //marginEnd:15,
+        borderRadius:15,
     },
 
     recomPic:{
@@ -296,11 +456,11 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         paddingHorizontal: 10,
       },
-
-    searchIcon: {
-        marginLeft:10,
-        marginRight: 15,
+      rowContainer: {
+        flexDirection: 'row',
       },
+
+    
 });
 
 export default Home
