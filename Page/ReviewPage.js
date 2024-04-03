@@ -1,6 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const images = [
   require('../assets/FC1.jpg'),
@@ -71,11 +72,22 @@ const ReviewPage = () => {
             > ● </Text>)}
           </View>
         </View>
-        <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
           <Text style={styles.cafeNameText}>Factory Coffee</Text>
-          <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
-        </View>
-        <Text style={styles.detailText}>Phayathai Bangkok</Text>
+          <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                <Icon name="access-time" size={20} style={{marginTop:10,marginEnd:5, color: "grey" }} />
+                <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
+                </View>
+          <View style={{flexDirection: 'row',alignItems: 'center',marginTop:5, }}>
+            <Icon name="location-on" size={20} style={{marginTop:10,marginEnd:5, color: "grey" }} />
+            <Text style={styles.openTimeText}>Phayathai Bangkok</Text>
+          </View>
+
+
+          <TouchableOpacity onPress={handleNavigateToDetail} >
+            <View style={styles.buttonBox}>
+              <Text style={styles.buttonText}>ดูรายละเอียดเพิ่มเติม</Text>
+              </View>
+          </TouchableOpacity>
 
 
         <Text style={styles.menuText}>| วิธีในการสกัดกาแฟ</Text>
@@ -126,6 +138,12 @@ const ReviewPage = () => {
                 <Image source={require('../assets/FacCof6.png')} style={styles.coverPic} />
         </View>
 
+        <TouchableOpacity onPress={handleNavigateToDetail} >
+            <View style={styles.buttonBox}>
+              <Text style={styles.buttonText}>ดูรายละเอียดเพิ่มเติม</Text>
+              </View>
+        </TouchableOpacity>
+
             
       </ScrollView>
 
@@ -163,8 +181,8 @@ const styles = StyleSheet.create({
   cafeNameText: {
     fontSize: 20,
     fontWeight: "bold",
-    color: "#000000",
-    marginTop:5,
+    color: "#8E5431",
+    marginTop:10,
     alignContent:"flex-start"
 },
 openTimeText:{
@@ -190,19 +208,30 @@ detailText: {
 menuText:{
   fontSize: 15,
   fontWeight: "bold",
-  color: "#333333",
+  color: "#8E5431",
   marginTop:10,
 },
-button: {
-  backgroundColor: "#8E5431",
-  padding: 10,
-  borderRadius: 20,
+
+
+buttonText:{
+  fontSize: 12,
+  fontWeight: "bold",
+  color: "#fff",
+  marginTop:5,
+
+},
+buttonBox:{
+  backgroundColor:"#8E5431",
+  width: 320,
+  height: 40,
   marginTop:10,
+  marginBottom:10,
+  marginStart:5,
+  borderRadius:20,
+  paddingStart:115,
+  paddingTop:5,
+  
 },
-buttonText: {
-  color: '#fff',
-  fontSize: 15,
-  alignSelf:'center',
-},
+
 
 })

@@ -31,20 +31,20 @@ const App = () => {
         name="Home"
         component={Home}
         options={{ //title: '',
-        //headerShown: false,
+        //headerShown: true,
         headerTransparent: true,
         headerTintColor: 'transparent',
-        headerStyle: { backgroundColor: '#8E5431'},//,headerTintColor: '#fff',
+        headerStyle: {backgroundColor: "#8E5431",}//,headerTintColor: '#fff',
         //headerTitleStyle: {fontWeight: 'bold',},
         //headerLeft: () => (
           //<Text style={{ marginLeft: 10, fontWeight: 'bold', fontSize: 10, color: "white"}}>Hi ! Cof hunt , what cof you hunt today !</Text>
-        //),
+       // ),
         //headerBackVisible: false,
       }}
       />
       
-      <Stack.Screen 
-      name='ReviewPage' 
+      <Stack.Screen
+      name='ReviewPage'
       component={ReviewPage}
       options={({ navigation }) => ({
         headerTitle: 'Review',
@@ -62,7 +62,7 @@ const App = () => {
       name='DetailPage' 
       component={DetailPage}
       options={({ navigation }) => ({
-        headerTitle: 'รายละเอียด',
+        headerTitle: 'รายละเอียดร้าน',
         headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
         headerTitleStyle: {fontWeight: 'bold',},
         headerLeft: () => (
@@ -75,7 +75,7 @@ const App = () => {
       />
 
       <Stack.Screen 
-      name='MoreRecommentMenu' 
+      name='MoreRecommentMenu'
       component={MoreRecommentMenu}
       options={({ navigation }) => ({
         headerTitle: 'Recomment Menu',

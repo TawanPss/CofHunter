@@ -1,56 +1,93 @@
-import { StyleSheet, Text, View,SafeAreaView,ScrollView} from 'react-native'
-import Icon from 'react-native-vector-icons/FontAwesome';
-import React from 'react'
+import React from 'react';
+import { Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+//import Icon from 'react-native-vector-icons/FontAwesome';
+import { Linking } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
+const openGoogleMaps = () => {
+    // URL สำหรับ Google Maps
+    const googleMapsUrl = 'https://maps.app.goo.gl/Map4Y2hap829kLnEA?g_st=ic';
+    // เปิด Google Maps
+    Linking.openURL(googleMapsUrl);};
+const openFacebook = () => {
+    const facebookUrl = 'https://www.facebook.com/factorybkk';
+    Linking.openURL(facebookUrl);};
+
+const openInstagram = () => {
+    const igUrl = 'https://www.instagram.com/factorybkk/';
+    Linking.openURL(igUrl);};
+
+    const openWebsite= () => {
+    const webUrl = 'https://factorybkk.com';
+    Linking.openURL(webUrl);};
+    
 const DetailPage = () => {
-  return (
+    return (
     <SafeAreaView >
         <ScrollView>
-            <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
+
+            <Image source={require('../assets/FacMap.png')} style={styles.MapPic} />
+            <TouchableOpacity onPress={openGoogleMaps} >
+                <View style={styles.buttonBox}>
+                    <Text style={styles.buttonText}>เปิดใน Google Maps</Text>
+                </View>
+            </TouchableOpacity>
             <Text style={styles.cafeNameText}>Factory Coffee</Text>
-            <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
+
+            <View style={{flexDirection: 'row',alignItems: 'center',marginTop:5, }}>
+                <Icon name="location-pin" size={20} style={{marginStart:15,marginTop:10,marginEnd:5, color: "grey" }}></Icon>
+                <Text style={styles.openTimeText}>49 Phaya Thai Rd, Thanon Phaya Thai, </Text>
             </View>
-            <Text style={styles.detailText}>Phayathai Bangkok</Text>
-            <View style={{marginTop:20,}}>
-                <View style={{flexDirection: 'row',justifyContent: 'flex-start', alignItems: 'center',marginTop:5, }}>
-                    <Icon name="check" size={20} style={{ marginLeft: 15, color:"green"}}></Icon>
-                    <Text style={styles.detailText }>Open Daily 8.30-16.30</Text>
-                </View>
-                <View style={{flexDirection: 'row',justifyContent: 'flex-start', alignItems: 'center',marginTop:5, }}>
-                    <Icon name="check" size={20} style={{ marginLeft: 15, color:"green"}}></Icon>
-                    <Text style={styles.detailText }>Open Daily 8.30-16.30</Text>
-                </View>
-                <View style={{flexDirection: 'row',justifyContent: 'flex-start', alignItems: 'center',marginTop:5, }}>
-                    <Icon name="check" size={20} style={{ marginLeft: 15, color:"green"}}></Icon>
-                    <Text style={styles.detailText }>Open Daily 8.30-16.30</Text>
-                </View>
-                <View style={{flexDirection: 'row',justifyContent: 'flex-start', alignItems: 'center',marginTop:5, }}>
-                    <Icon name="close" size={25} style={{ marginLeft: 15, color:"red"}}></Icon>
-                    <Text style={styles.detailText }>Open Daily 8.30-16.30</Text>
-                </View>
-            </View>
+            <Text style={styles.openTimeText}>Ratchathewi, Bangkok 10400 </Text>
+
+            <View style={styles.line}></View>
+
             <View>
-                <Text style={styles.headerText}>ช่วงราคา</Text>
-                <Text style={styles.detailText }>100-250 บาท</Text>
-                <Text style={styles.headerText}>จำนวนที่นั่ง</Text>
-                <Text style={styles.detailText }>81-150 ที่นั่ง</Text>
-                <Text style={styles.headerText}>เวลาเปิด-ปิด เดลิเวอลี่</Text>
-                <Text style={styles.detailText }>เปิดทุกวัน 8.30-16.30</Text>
+                <Text style={styles.headerText}>Moday</Text>
+                <Text style={styles.detailText }>  • 8 AM–4 PM</Text>
+                <Text style={styles.headerText}>Tuesday</Text>
+                <Text style={styles.detailText }>  • Closed</Text>
+                <Text style={styles.headerText}>Wednesday</Text>
+                <Text style={styles.detailText }>  • Closed</Text>
+                <Text style={styles.headerText}>Thursday</Text>
+                <Text style={styles.detailText }>  • Closed</Text>
+                <Text style={styles.headerText}>Friday</Text>
+                <Text style={styles.detailText }>  • 8 AM–4 PM</Text>
+                <Text style={styles.headerText}>Saturday</Text>
+                <Text style={styles.detailText }>  • 8 AM–4 PM</Text>
+                <Text style={styles.headerText}>Sunday</Text>
+                <Text style={styles.detailText }>  • 8 AM–4 PM</Text>
+                
             </View>
-            <View style={{marginTop:20,}}>
-                <View style={{flexDirection: 'row',justifyContent: 'flex-start', alignItems: 'center',marginTop:5, }}>
-                    <Icon name="facebook" size={20} style={{ marginLeft: 15,marginRight:5, color:"#333333"}}></Icon>
-                    <Text style={styles.detailText }>Factory Coffee</Text>
-                </View>
-                <View style={{flexDirection: 'row',justifyContent: 'flex-start', alignItems: 'center',marginTop:5, }}>
-                    <Icon name="instagram" size={20} style={{ marginLeft: 15, color:"#333333"}}></Icon>
-                    <Text style={styles.detailText }>Open Daily 8.30-16.30</Text>
-                </View>
+
+            <View style={styles.line}></View>
+
+            <View>
+                <TouchableOpacity onPress={openFacebook} >
+                    <View style={{flexDirection: 'row', alignItems: 'center',marginTop:5, }}>
+                        <Image source={require('../assets/facebook.png')} style={styles.socialPic} />
+                        <Text style={styles.socialText }>Factory Coffee - Bangkok </Text>    
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={openInstagram} >
+                    <View style={{flexDirection: 'row',alignItems: 'center',marginTop:5, }}>
+                        <Image source={require('../assets/instagram.png')} style={styles.socialPic} />
+                        <Text style={styles.socialText }>factorybkk</Text>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={openWebsite} > 
+                    <View style={{flexDirection: 'row',alignItems: 'center',marginTop:5, }}>
+                        <Image source={require('../assets/web.png')} style={styles.socialPic} />
+                        <Text style={styles.socialText }>factorybkk.com</Text>
+                    </View>
+                </TouchableOpacity>
                 
             </View>
         </ScrollView>
     </SafeAreaView>
-  )
+)
 }
 
 export default DetailPage
@@ -65,7 +102,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: "bold",
         color: "#000000",
-        marginTop:5,
+        marginTop:15,
         marginStart:15,
         alignContent:"flex-start"
     },
@@ -82,15 +119,66 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: "regular",
         color: "#333333",
-        marginStart:15,
+        marginStart:45,
         marginTop:5,
+      },
+      socialText: {
+        fontSize: 12,
+        fontWeight: "bold",
+        color: "#333333",
+        marginStart:15,
+        marginTop:20,
       },
 
     headerText:{
         fontSize: 15,
         fontWeight: "bold",
         color: "#505050",
-        marginStart:15,
-        marginTop:20, 
-    }
+        marginStart:35,
+        marginTop:10, 
+    },
+    buttonText:{
+        fontSize: 12,
+        fontWeight: "bold",
+        color: "#fff",
+        marginTop:5,
+      
+      },
+      buttonBox:{
+        backgroundColor:"#8E5431",
+        width: 175,
+        height: 40,
+        marginTop:15,
+        marginStart:105,
+        borderRadius:20,
+        paddingStart:30,
+        paddingTop:5,
+        
+      },
+      MapPic:{
+        width:360,
+        height:250,
+        marginTop:10,
+        marginStart:7.5,
+        //marginEnd:7.5,
+        borderRadius:15,
+    },
+    socialPic:{
+        width:40,
+        height:40,
+        marginTop:10,
+        marginStart:25,
+        //marginEnd:7.5,
+        borderRadius:15,
+    },
+    line:{
+        borderColor:"#D9D9D9",
+        backgroundColor:"#D9D9D9",
+        width:375,
+        borderWidth:1,
+        marginTop:15,
+        
+       
+
+    },
 })
