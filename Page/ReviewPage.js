@@ -75,7 +75,7 @@ const ReviewPage = () => {
           <Text style={styles.cafeNameText}>Factory Coffee</Text>
           <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                 <Icon name="access-time" size={20} style={{marginTop:10,marginEnd:5, color: "grey" }} />
-                <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
+                <Text style={styles.openTimeText}>Open Fri - Mon 8.30-16.30</Text>
                 </View>
           <View style={{flexDirection: 'row',alignItems: 'center',marginTop:5, }}>
             <Icon name="location-on" size={20} style={{marginTop:10,marginEnd:5, color: "grey" }} />
@@ -138,11 +138,7 @@ const ReviewPage = () => {
                 <Image source={require('../assets/FacCof6.png')} style={styles.coverPic} />
         </View>
 
-        <TouchableOpacity onPress={handleNavigateToDetail} >
-            <View style={styles.buttonBox}>
-              <Text style={styles.buttonText}>ดูรายละเอียดเพิ่มเติม</Text>
-              </View>
-        </TouchableOpacity>
+   
 
             
       </ScrollView>

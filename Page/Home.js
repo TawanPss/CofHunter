@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Image, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Home = ({navigation}) => {
@@ -40,7 +40,7 @@ const Home = ({navigation}) => {
 
 
 return (
-    <SafeAreaView style={styles.container}>
+    //<SafeAreaView style={styles.container}>
         <ScrollView style={{paddingBottom:30}}>
 
         
@@ -268,7 +268,7 @@ return (
         </TouchableOpacity>
 
     </ScrollView>
-    </SafeAreaView>
+    //</SafeAreaView>
     )
 }
 
@@ -281,11 +281,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     HeaderBox:{
-        borderColor:"#8E5431",
+        //borderColor:"#8E5431",
         backgroundColor: "#8E5431",
-        width: "100%",
-        height: 120,
-        borderWidth:2,
+        width: 375,
+        height: 190,
         borderBottomLeftRadius: 30,
         borderBottomRightRadius: 30,
         paddingStart:10,
@@ -312,7 +311,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: "bold",
         color: "#FFFFFF" ,
-        marginTop:5,
+        marginTop:75,
         marginStart:15
 
        
@@ -411,7 +410,7 @@ const styles = StyleSheet.create({
         borderColor:"#FFFFFF",
         backgroundColor:"#FFFFFF",
         width: "90%",
-        height: "35%",
+        height: "20%",
         borderWidth:1,
         marginTop:30,
         marginStart:15,

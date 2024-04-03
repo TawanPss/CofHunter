@@ -38,7 +38,7 @@ const DetailPage = () => {
                 <Icon name="location-pin" size={20} style={{marginStart:15,marginTop:10,marginEnd:5, color: "grey" }}></Icon>
                 <Text style={styles.openTimeText}>49 Phaya Thai Rd, Thanon Phaya Thai, </Text>
             </View>
-            <Text style={styles.openTimeText}>Ratchathewi, Bangkok 10400 </Text>
+            <Text style={{marginStart:40}}>Ratchathewi, Bangkok 10400 </Text>
 
             <View style={styles.line}></View>
 

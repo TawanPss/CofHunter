@@ -31,10 +31,10 @@ const App = () => {
         name="Home"
         component={Home}
         options={{ //title: '',
-        //headerShown: true,
-        headerTransparent: true,
-        headerTintColor: 'transparent',
-        headerStyle: {backgroundColor: "#8E5431",}//,headerTintColor: '#fff',
+        headerShown: false,
+        //headerTransparent: true,
+        //headerTintColor: 'transparent',
+        //headerStyle: {backgroundColor: "#8E5431",}//,headerTintColor: '#fff',
         //headerTitleStyle: {fontWeight: 'bold',},
         //headerLeft: () => (
           //<Text style={{ marginLeft: 10, fontWeight: 'bold', fontSize: 10, color: "white"}}>Hi ! Cof hunt , what cof you hunt today !</Text>
