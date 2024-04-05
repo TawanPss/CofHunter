@@ -90,42 +90,42 @@ return (
                 <View style={styles.CoffeeBox}>
                     <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                        <Image source={require('../assets/Rynn.jpeg')} style={styles.CoffeePic} />
                     </View>
-                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    <Text style={styles.CoffeeNameText}> RYNN KAFFE </Text>
                     </Pressable>
                 </View>
                 <View style={styles.CoffeeBox}>
                     <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                        <Image source={require('../assets/anony1.jpeg')} style={styles.CoffeePic} />
                     </View>
-                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    <Text style={styles.CoffeeNameText}>Anonymous Coffee</Text>
                     </Pressable>
                 </View>
                 <View style={styles.CoffeeBox}>
                     <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                        <Image source={require('../assets/oldschool.jpeg')} style={styles.CoffeePic} />
                     </View>
-                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    <Text style={styles.CoffeeNameText}> The Old School</Text>
                     </Pressable>
                 </View>
                 <View style={styles.CoffeeBox}>
                     <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                        <Image source={require('../assets/churn.jpeg')} style={styles.CoffeePic} />
                     </View>
-                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    <Text style={styles.CoffeeNameText}>Churn Buttery</Text>
                     </Pressable>
                 </View>
 
                 <View style={styles.CoffeeBox}>
                     <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                        <Image source={require('../assets/khotcher.jpeg')} style={styles.CoffeePic} />
                     </View>
-                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    <Text style={styles.CoffeeNameText}>Khotcher's Cafe</Text>
                     </Pressable>
                 </View>
 
@@ -153,34 +153,34 @@ return (
                 <View style={styles.CoffeeBox}>
                     <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                        <Image source={require('../assets/Mont Blanc.jpg')} style={styles.CoffeePic} />
                     </View>
-                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    <Text style={styles.CoffeeNameText}>Mont Blanc</Text>
                     </Pressable>
                 </View>
                 <View style={styles.CoffeeBox}>
                     <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                        <Image source={require('../assets/GLIG.jpg')} style={styles.CoffeePic} />
                     </View>
-                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    <Text style={styles.CoffeeNameText}>GLIG CAFE</Text>
                     </Pressable>
                 </View>
                 <View style={styles.CoffeeBox}>
                     <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                        <Image source={require('../assets/MTCH.jpg')} style={styles.CoffeePic} />
                     </View>
-                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    <Text style={styles.CoffeeNameText}>MTCH Sukhumvit</Text>
                     </Pressable>
                 </View>
 
                 <View style={styles.CoffeeBox}>
                     <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <Image source={require('../assets/FacCof1.png')} style={styles.CoffeePic} />
+                        <Image source={require('../assets/DOUGH.jpg')} style={styles.CoffeePic} />
                     </View>
-                    <Text style={styles.CoffeeNameText}>Factory Coffee</Text>
+                    <Text style={styles.CoffeeNameText}>DROP BY DOUGH</Text>
                     </Pressable>
                 </View>
 
