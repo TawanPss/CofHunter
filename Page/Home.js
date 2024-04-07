@@ -136,7 +136,7 @@ return (
 
 
         <View>
-            <Text style={styles.HeaderText}>| ร้านใกล้คุณ !</Text>
+            <Text style={styles.HeaderText}>| ร้านใหม่มาเเรง !</Text>
         </View>
 
         <View style={styles.container}>
