@@ -1,12 +1,13 @@
-import { StyleSheet, Text, View,SafeAreaView,ScrollView,StatusBar, Dimensions,Image,TouchableOpacity } from 'react-native'
-import React ,{useState,useEffect} from 'react'
 import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react';
+import { Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const images = [
-  require('../assets/FactorycoffeeBuilding.jpg'),
-  require('../assets/Factorycoffeemenu1.jpg'),
-  require('../assets/Factorycoffeemenu2.jpg'),
-  require('../assets/FactorycoffeeDessert.jpg')
+  require('../assets/FC1.jpg'),
+  require('../assets/FC2.jpg'),
+  require('../assets/FC3.jpg'),
+  require('../assets/FC4.jpg')
 ]
 
 const WIDTH = Dimensions.get('window').width;
@@ -59,21 +60,32 @@ const ReviewPage = () => {
             > ● </Text>)}
           </View>
         </View>
-        <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
           <Text style={styles.cafeNameText}>Factory Coffee</Text>
-          <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
-        </View>
-        <Text style={styles.detailText}>Phayathai Bangkok</Text>
-        <TouchableOpacity onPress={handleNavigateToDetail} style={styles.button}>
-            <Text style={styles.buttonText}>ดูรายละเอียด</Text>
-        </TouchableOpacity>
+          <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                <Icon name="access-time" size={20} style={{marginTop:10,marginEnd:5, color: "grey" }} />
+                <Text style={styles.openTimeText}>Open Fri - Mon 8.30-16.30</Text>
+                </View>
+          <View style={{flexDirection: 'row',alignItems: 'center',marginTop:5, }}>
+            <Icon name="location-on" size={20} style={{marginTop:10,marginEnd:5, color: "grey" }} />
+            <Text style={styles.openTimeText}>Phayathai Bangkok</Text>
+          </View>
+
+
+          <TouchableOpacity onPress={handleNavigateToDetail} >
+            <View style={styles.buttonBox}>
+              <Text style={styles.buttonText}>ดูรายละเอียดเพิ่มเติม</Text>
+              </View>
+          </TouchableOpacity>
 
 
         <Text style={styles.menuText}>| วิธีในการสกัดกาแฟ</Text>
-          <Text style={styles.detailText}>- Espresso Machine</Text>
-          <Text style={styles.detailText}>- Drip</Text>
-          <Text style={styles.detailText}>- AeroPress</Text>
-          <Text style={styles.detailText}>- Cold Brew</Text>
+        <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
+                <Image source={require('../assets/drip.png')} style={styles.coverPic} />
+                <Image source={require('../assets/aeropess.png')} style={styles.coverPic} />
+                <Image source={require('../assets/coldbrew.png')} style={styles.coverPic} />
+                <Image source={require('../assets/machine.png')} style={styles.coverPic} />
+        </View>
+          
 
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
           <Text style={styles.menuText}>| เมนูแนะนำ</Text>
@@ -96,10 +108,10 @@ const ReviewPage = () => {
           </TouchableOpacity>
         </View>
         <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FCB1.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FCB2.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FCB3.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/FCB4.jpg')} style={styles.coverPic} />
         </View>
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
           <Text style={styles.menuText}>| เมนูทั้งหมด</Text>
@@ -113,6 +125,8 @@ const ReviewPage = () => {
                 <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
                 <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
         </View>
+
+   
 
             
       </ScrollView>
@@ -132,7 +146,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
     borderRadius:10,
     width: WIDTH*0.9,
-    height: HEIGHT*0.6,
+    height: HEIGHT*0.5,
   },
   wrapdot:{
     position:'absolute',
@@ -142,7 +156,7 @@ const styles = StyleSheet.create({
   },
   dotActive:{
     margin: 3,
-    color: 'black'
+    color: '#000000'
   },
   dot:{
     margin: 3,
@@ -151,8 +165,8 @@ const styles = StyleSheet.create({
   cafeNameText: {
     fontSize: 20,
     fontWeight: "bold",
-    color: "Black",
-    marginTop:5,
+    color: "#8E5431",
+    marginTop:10,
     alignContent:"flex-start"
 },
 openTimeText:{
@@ -172,25 +186,36 @@ coverPic:{
 detailText: {
   fontSize: 15,
   fontWeight: "regular",
-  Colors: "333333",
+  color: "#333333",
   marginTop:5,
 },
 menuText:{
   fontSize: 15,
   fontWeight: "bold",
-  Colors: "333333",
+  color: "#8E5431",
   marginTop:10,
 },
-button: {
-  backgroundColor: "#8E5431",
-  padding: 10,
-  borderRadius: 20,
+
+
+buttonText:{
+  fontSize: 12,
+  fontWeight: "bold",
+  color: "#fff",
+  marginTop:5,
+
+},
+buttonBox:{
+  backgroundColor:"#8E5431",
+  width: 320,
+  height: 40,
   marginTop:10,
+  marginBottom:10,
+  marginStart:5,
+  borderRadius:20,
+  paddingStart:115,
+  paddingTop:5,
+  
 },
-buttonText: {
-  color: '#fff',
-  fontSize: 15,
-  alignSelf:'center',
-},
+
 
 })
