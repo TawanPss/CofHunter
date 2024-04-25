@@ -11,10 +11,9 @@ import MoreBeanPage from './Page/MoreBeanPage';
 import MoreMenuPage from './Page/MoreMenuPage';
 import Home from './Page/Home';
 import LandingPage from './Page/LandingPage';
-import MoreBeanPage from './Page/MoreBeanPage';
-import MoreMenuPage from './Page/MoreMenuPage';
-import MoreRecommentMenu from './Page/MoreRecommentMenu';
 import ReviewPage from './Page/ReviewPage';
+import Login from './Page/Login';
+import Register from './Page/Register';
 
 
 
@@ -29,6 +28,15 @@ const App = () => {
       component={LandingPage}
       options={{headerShown: false}}/>
 
+      <Stack.Screen
+      name='Login'
+      component={Login}
+      options={{headerShown: false}}/>
+
+      <Stack.Screen
+      name='Register'
+      component={Register}
+      options={{headerShown: false}}/>
 
       <Stack.Screen
         name="Home"

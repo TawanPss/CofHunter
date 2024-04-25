@@ -29,7 +29,17 @@ const ReviewPage = () => {
   const handleNavigateToDetail = () => {
     navigation.navigate('DetailPage'); }
 
-  const findmoreReccommentMenu = () =>{}
+  const findmoreReccommentMenu = () =>{
+    navigation.navigate('MoreRecommentMenu')
+  }
+
+  const moreBean = () =>{
+    navigation.navigate('MoreBeanPage')
+  }
+
+  const moreMenu = () =>{
+    navigation.navigate('MoreMenuPage')
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -103,7 +113,7 @@ const ReviewPage = () => {
         
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
           <Text style={styles.menuText}>| เมล็ดกาแฟที่ใช้</Text>
-          <TouchableOpacity onPress={findmoreReccommentMenu} >
+          <TouchableOpacity onPress={moreBean} >
             <Text style={styles.menuText}>ดูทั้งหมด</Text>
           </TouchableOpacity>
         </View>
@@ -115,7 +125,7 @@ const ReviewPage = () => {
         </View>
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
           <Text style={styles.menuText}>| เมนูทั้งหมด</Text>
-          <TouchableOpacity onPress={findmoreReccommentMenu} >
+          <TouchableOpacity onPress={moreMenu} >
             <Text style={styles.menuText}>ดูทั้งหมด</Text>
           </TouchableOpacity>
         </View>
