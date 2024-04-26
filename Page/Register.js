@@ -10,6 +10,10 @@ const Register = () => {
         navigation.navigate('Login')
     }
 
+    const navtoEditInfo= () => {
+      navigation.navigate('EditCafeInfo')
+  }
+
   return (
     <SafeAreaView style={styles.container}>
         <Text style={styles.HeaderText}>Register to become</Text>
@@ -21,7 +25,7 @@ const Register = () => {
             <TextInput style={styles.inputFillBox} placeholder='Email'/>
             <Text style={styles.inputText}>Password</Text>
             <TextInput style={styles.inputFillBox} placeholder='Password' secureTextEntry />
-            <Pressable style={styles.loginButton} onPress={navtoLogin}><Text style={styles.buttonText}>Login</Text></Pressable>
+            <Pressable style={styles.loginButton} onPress={navtoEditInfo}><Text style={styles.buttonText}>Register</Text></Pressable>
             <Pressable><Text style={styles.detailText} onPress={navtoLogin}>Already have an account? Login</Text></Pressable>
         </View>   
     </SafeAreaView>

@@ -14,6 +14,7 @@ import LandingPage from './Page/LandingPage';
 import ReviewPage from './Page/ReviewPage';
 import Login from './Page/Login';
 import Register from './Page/Register';
+import EditCafeInfo from './Page/EditCafeInfo';
 
 
 
@@ -159,6 +160,22 @@ const App = () => {
         headerLeft: () => (
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <Icon name="angle-left" size={30} style={{ marginLeft: 10, color:"white"}} />
+          </TouchableOpacity>
+        ),
+      })}
+
+      />
+
+<Stack.Screen 
+      name='EditCafeInfo' 
+      component={EditCafeInfo}
+      options={({ navigation }) => ({
+        headerTitle: '',
+        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
+        headerTitleStyle: {fontWeight: 'bold',},
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Icon name="angle-left" size={20} style={{ marginLeft: 10, color:"white"}} />
           </TouchableOpacity>
         ),
       })}
