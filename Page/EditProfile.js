@@ -15,6 +15,8 @@ const EditProfile = () => {
   return (
     <SafeAreaView style={styles.container}>
         <ScrollView style={{width:"100%"}}>
+        <Image source={require('../image/editpro.png')} style={styles.ProfilePic}></Image> 
+
         <Text style={styles.HeaderText}>Edit Profile</Text>
         <View style={styles.inputBox}>
             <Text style={styles.inputText}>Name</Text>
@@ -47,16 +49,15 @@ const styles = StyleSheet.create({
       },
     
       HeaderText: {
-        fontSize: 25,
+        fontSize: 15,
         fontWeight: "bold",
         color: "#000" ,
-        marginStart:15,
+        marginStart:10,
         marginTop:10,
         textAlign:"center",
     },
       inputText:{
-        fontSize: 18,
-        fontWeight: "bold",
+        fontSize: 13,
         color: "#000" ,
         marginStart:15,
         marginTop:10,
@@ -138,4 +139,10 @@ const styles = StyleSheet.create({
       marginTop:0,
       alignSelf:"center",
   },
+  ProfilePic:{
+    width:150,
+    height:150,
+    alignSelf:"center",
+    marginTop:20
+},
 })

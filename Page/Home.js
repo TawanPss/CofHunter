@@ -48,7 +48,15 @@ const Home = ({navigation}) => {
         <ScrollView style={{paddingBottom:30}}>
 
         <View style={styles.HeaderBox}>
-            <Text style={styles.HeaderNameText}>Hi ! Cof hunt , what cof you hunt today !</Text>
+            <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', }}>
+            <Text style={styles.HeaderNameText}>Hi ! Cof hunt,</Text>
+            <TouchableOpacity onPress={editProfile} >
+                <Image source={require('../image/profilepic.png')} style={styles.ProfilePic}></Image> 
+           </TouchableOpacity>
+            </View>
+
+            <Text style={styles.HeaderNameText_2}>what cof you hunt today !</Text>
+
             <View style={styles.searchBox}>
             <View style={{flexDirection: 'row', alignItems: 'center' }}>
                 <Icon name="search" size={20} style={{ marginTop:3,marginStart:10, color: "grey" }} />
@@ -60,7 +68,6 @@ const Home = ({navigation}) => {
             
         </View>
 
-        <Pressable><Text style={styles.cancelText} onPress={editProfile}>Edit Profile</Text></Pressable>
 
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
             <Text style={styles.HeaderText}>| Cof Recomment</Text>
@@ -334,7 +341,16 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: "bold",
         color: "#FFFFFF" ,
-        marginTop:75,
+        marginTop:50,
+        marginStart:15
+
+       
+    },
+    HeaderNameText_2: {
+        fontSize: 15,
+        fontWeight: "bold",
+        color: "#FFFFFF" ,
+        marginTop:5,
         marginStart:15
 
        
@@ -357,6 +373,7 @@ const styles = StyleSheet.create({
         marginTop:10,
         marginRight:15
       },
+    
 
     cafeNameText: {
         fontSize: 15,
@@ -435,7 +452,7 @@ const styles = StyleSheet.create({
         width: "90%",
         height: "20%",
         borderWidth:1,
-        marginTop:30,
+        marginTop:20,
         marginStart:15,
         marginEnd:15,
         borderRadius:20,
@@ -459,6 +476,16 @@ const styles = StyleSheet.create({
         //marginStart:1,
         //marginEnd:15,
         borderRadius:15,
+    },
+    ProfilePic:{
+        width:40,
+        height:40,
+       // marginTop:-10,
+        //marginStart:1,
+        //marginEnd:15,
+        borderRadius:15,
+        marginTop:40,
+        marginRight:20
     },
 
     recomPic:{
