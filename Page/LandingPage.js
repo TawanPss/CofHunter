@@ -3,7 +3,7 @@ import React from 'react'
 
 const LandingPage = ({navigation}) => {
     const onPress = () => {
-        navigation.navigate('Home')
+        navigation.navigate('Login')
     }
 
 

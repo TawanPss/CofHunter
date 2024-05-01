@@ -11,11 +11,16 @@ import MoreBeanPage from './Page/MoreBeanPage';
 import MoreMenuPage from './Page/MoreMenuPage';
 import Home from './Page/Home';
 import LandingPage from './Page/LandingPage';
-import MoreBeanPage from './Page/MoreBeanPage';
-import MoreMenuPage from './Page/MoreMenuPage';
-import MoreRecommentMenu from './Page/MoreRecommentMenu';
 import ReviewPage from './Page/ReviewPage';
-
+import Login from './Page/Login';
+import Register from './Page/Register';
+import EditCafeInfo from './Page/EditCafeInfo';
+import AddImage from './Page/AddImage';
+import AddMenu from './Page/AddMenu';
+import DeleteMenu from './Page/DeleteMenu';
+import DeleteImage from './Page/DeleteImage'; 
+import EditProfile from './Page/EditProfile';
+import MyReview from './Page/MyReview';
 
 
 const Stack = createNativeStackNavigator();
@@ -29,20 +34,21 @@ const App = () => {
       component={LandingPage}
       options={{headerShown: false}}/>
 
+      <Stack.Screen
+      name='Login'
+      component={Login}
+      options={{headerShown: false}}/>
+
+      <Stack.Screen
+      name='Register'
+      component={Register}
+      options={{headerShown: false}}/>
 
       <Stack.Screen
         name="Home"
         component={Home}
         options={{ //title: '',
         headerShown: false,
-        //headerTransparent: true,
-        //headerTintColor: 'transparent',
-        //headerStyle: {backgroundColor: "#8E5431",}//,headerTintColor: '#fff',
-        //headerTitleStyle: {fontWeight: 'bold',},
-        //headerLeft: () => (
-          //<Text style={{ marginLeft: 10, fontWeight: 'bold', fontSize: 10, color: "white"}}>Hi ! Cof hunt , what cof you hunt today !</Text>
-       // ),
-        //headerBackVisible: false,
       }}
       />
       
@@ -151,6 +157,118 @@ const App = () => {
         headerLeft: () => (
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <Icon name="angle-left" size={30} style={{ marginLeft: 10, color:"white"}} />
+          </TouchableOpacity>
+        ),
+      })}
+
+      />
+
+<Stack.Screen
+      name='MyReview'
+      component={MyReview}
+      options={({ navigation }) => ({
+        headerTitle: 'My Review',
+        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
+        headerTitleStyle: {fontWeight: 'bold',},
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Icon name="angle-left" size={30} style={{ marginLeft: 10, color:"white"}} />
+          </TouchableOpacity>
+        ),
+      })}
+
+      />
+
+<Stack.Screen 
+      name='EditCafeInfo' 
+      component={EditCafeInfo}
+      options={({ navigation }) => ({
+        headerTitle: '',
+        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
+        headerTitleStyle: {fontWeight: 'bold',},
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Icon name="angle-left" size={20} style={{ marginLeft: 10, color:"white"}} />
+          </TouchableOpacity>
+        ),
+      })}
+
+      />
+
+<Stack.Screen 
+      name='AddImage' 
+      component={AddImage}
+      options={({ navigation }) => ({
+        headerTitle: '',
+        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
+        headerTitleStyle: {fontWeight: 'bold',},
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Icon name="angle-left" size={20} style={{ marginLeft: 10, color:"white"}} />
+          </TouchableOpacity>
+        ),
+      })}
+
+      />
+
+<Stack.Screen 
+      name='AddMenu' 
+      component={AddMenu}
+      options={({ navigation }) => ({
+        headerTitle: '',
+        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
+        headerTitleStyle: {fontWeight: 'bold',},
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Icon name="angle-left" size={20} style={{ marginLeft: 10, color:"white"}} />
+          </TouchableOpacity>
+        ),
+      })}
+
+      />
+
+<Stack.Screen 
+      name='DeleteMenu' 
+      component={DeleteMenu}
+      options={({ navigation }) => ({
+        headerTitle: 'DeleteMenu',
+        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
+        headerTitleStyle: {fontWeight: 'bold',},
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Icon name="angle-left" size={20} style={{ marginLeft: 10, color:"white"}} />
+          </TouchableOpacity>
+        ),
+      })}
+
+      />
+
+<Stack.Screen 
+      name='DeleteImage' 
+      component={DeleteImage}
+      options={({ navigation }) => ({
+        headerTitle: 'DeleteImage',
+        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
+        headerTitleStyle: {fontWeight: 'bold',},
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Icon name="angle-left" size={20} style={{ marginLeft: 10, color:"white"}} />
+          </TouchableOpacity>
+        ),
+      })}
+
+      />
+
+<Stack.Screen 
+      name='EditProfile' 
+      component={EditProfile}
+      options={({ navigation }) => ({
+        headerTitle: '',
+        headerStyle: {backgroundColor: "#8E5431",},headerTintColor: '#fff',
+        headerTitleStyle: {fontWeight: 'bold',},
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Icon name="angle-left" size={20} style={{ marginLeft: 10, color:"white"}} />
           </TouchableOpacity>
         ),
       })}

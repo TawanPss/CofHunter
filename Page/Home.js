@@ -38,14 +38,25 @@ const Home = ({navigation}) => {
         navigation.navigate('Blog1')
     }
 
+    const editProfile= () =>{
+        navigation.navigate('EditProfile')
+    }
+
 
     return (
     //<SafeAreaView style={styles.container}>
         <ScrollView style={{paddingBottom:30}}>
 
-        
         <View style={styles.HeaderBox}>
-            <Text style={styles.HeaderNameText}>Hi ! Cof hunt , what cof you hunt today !</Text>
+            <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', }}>
+            <Text style={styles.HeaderNameText}>Hi ! Cof hunt,</Text>
+            <TouchableOpacity onPress={editProfile} >
+                <Image source={require('../image/profilepic.png')} style={styles.ProfilePic}></Image> 
+           </TouchableOpacity>
+            </View>
+
+            <Text style={styles.HeaderNameText_2}>what cof you hunt today !</Text>
+
             <View style={styles.searchBox}>
             <View style={{flexDirection: 'row', alignItems: 'center' }}>
                 <Icon name="search" size={20} style={{ marginTop:3,marginStart:10, color: "grey" }} />
@@ -54,9 +65,9 @@ const Home = ({navigation}) => {
                 
                 
             </View>
+            
         </View>
 
-        
 
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
             <Text style={styles.HeaderText}>| Cof Recomment</Text>
@@ -244,55 +255,25 @@ const Home = ({navigation}) => {
                 <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
                 <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
 
-                <Image source={require('../assets/FacCof1.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof2.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof3.png')} style={styles.coverPic} />
-                <Image source={require('../assets/FacCof4.png')} style={styles.coverPic} />
-
             </View>
             </Pressable>
         </View>
 
         <View style={styles.cafeBox}>
-            <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={styles.cafeNameText}>Factory Coffee</Text>
-                <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
-            </View>
-            <Text style={styles.detailText}>Phayathai Bangkok</Text>
+            <Pressable onPress={() => onPressItem(1,"Factory_Coffee")}>
+            <Text style={styles.cafeNameText}>Factory Coffee</Text>
+            <Text style={styles.detailText}>Phayathai, Bangkok</Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <Icon name="access-time" size={13} style={{ marginLeft: 5,marginTop:2, color: "grey" }} />
+                <Text style={styles.openTimeText}>Open 8.30-16.30</Text>
+                </View>
             <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/SuntimeMenu1.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/SuntimeMenu2.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/SuntimeMenu3.jpg')} style={styles.coverPic} />
+                <Image source={require('../assets/SuntimeMenu4.jpg')} style={styles.coverPic} />
             </View>
-        </View>
-
-        <View style={styles.cafeBox}>
-            <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={styles.cafeNameText}>Factory Coffee</Text>
-                <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
-            </View>
-            <Text style={styles.detailText}>Phayathai Bangkok</Text>
-            <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
-            </View>
-        </View>
-
-        <View style={styles.cafeBox}>
-            <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={styles.cafeNameText}>Factory Coffee</Text>
-                <Text style={styles.openTimeText}>Open Daily 8.30-16.30</Text>
-            </View>
-            <Text style={styles.detailText}>Phayathai Bangkok</Text>
-            <View  style={{flexDirection: 'row',justifyContent: 'space-around', alignItems: 'center' }}>
-                <Image source={require('../assets/FactorycoffeeBuilding.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu1.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/Factorycoffeemenu2.jpg')} style={styles.coverPic} />
-                <Image source={require('../assets/FactorycoffeeDessert.jpg')} style={styles.coverPic} />
-            </View>
+            </Pressable>
         </View>
 
         <View style={styles.cafeBox}>
@@ -312,9 +293,9 @@ const Home = ({navigation}) => {
             </Pressable>
         </View>
 
-        <TouchableOpacity onPress={testapi} >
+        {/* <TouchableOpacity onPress={testapi} >
             <Text style={styles.menuText}></Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
           
     </ScrollView>
@@ -332,7 +313,7 @@ const styles = StyleSheet.create({
     HeaderBox:{
         //borderColor:"#8E5431",
         backgroundColor: "#8E5431",
-        width: 375,
+        width: "100%",
         height: 190,
         borderBottomLeftRadius: 30,
         borderBottomRightRadius: 30,
@@ -360,7 +341,16 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: "bold",
         color: "#FFFFFF" ,
-        marginTop:75,
+        marginTop:50,
+        marginStart:15
+
+       
+    },
+    HeaderNameText_2: {
+        fontSize: 15,
+        fontWeight: "bold",
+        color: "#FFFFFF" ,
+        marginTop:5,
         marginStart:15
 
        
@@ -383,6 +373,7 @@ const styles = StyleSheet.create({
         marginTop:10,
         marginRight:15
       },
+    
 
     cafeNameText: {
         fontSize: 15,
@@ -433,7 +424,7 @@ const styles = StyleSheet.create({
 
     cafeBox:{
         borderColor:"#D9D9D9",
-        width:375,
+        width:"100%",
         borderWidth:0.5,
         //marginTop:5,
         //marginStart:15,
@@ -461,7 +452,7 @@ const styles = StyleSheet.create({
         width: "90%",
         height: "20%",
         borderWidth:1,
-        marginTop:30,
+        marginTop:20,
         marginStart:15,
         marginEnd:15,
         borderRadius:20,
@@ -486,6 +477,16 @@ const styles = StyleSheet.create({
         //marginEnd:15,
         borderRadius:15,
     },
+    ProfilePic:{
+        width:40,
+        height:40,
+       // marginTop:-10,
+        //marginStart:1,
+        //marginEnd:15,
+        borderRadius:15,
+        marginTop:40,
+        marginRight:20
+    },
 
     recomPic:{
         width:280,
@@ -507,6 +508,14 @@ const styles = StyleSheet.create({
       rowContainer: {
         flexDirection: 'row',
       },
+
+      cancelText: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "#000",
+        marginTop:0,
+        alignSelf:"center",
+    },
 
     
 });
