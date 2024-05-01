@@ -10,6 +10,22 @@ const EditCafeInfo = () => {
         navigation.navigate('Login')
     }
 
+    const navtoAddImage = () => {
+      navigation.navigate('AddImage')
+  }
+
+    const navtoAddMenu = () => {
+      navigation.navigate('AddMenu')
+}
+    const navtoDeleteMenu = () => {
+      navigation.navigate('DeleteMenu')
+    }
+
+    const navtoDeleteImage = () => {
+      navigation.navigate('DeleteImage')
+    }
+    
+
   return (
     <SafeAreaView style={styles.container}>
         <ScrollView style={{width:"100%"}}>
@@ -35,30 +51,31 @@ const EditCafeInfo = () => {
             <TextInput style={styles.inputFillBox} placeholder='none'/>
             <Text style={styles.inputText}>Cover Image</Text>
             <View style={styles.editButtonBox}>
-                <Pressable style={styles.AddButton} ><Text style={styles.buttonText}>Add</Text></Pressable>
-                <Pressable style={styles.DeleteButton} ><Text style={styles.buttonText}>Delete</Text></Pressable>
+                <Pressable style={styles.AddButton} onPress={navtoAddImage}><Text style={styles.buttonText}>Add</Text></Pressable>
+                <Pressable style={styles.DeleteButton} onPress={navtoDeleteImage}><Text style={styles.buttonText}>Delete</Text></Pressable>
             </View>
             <Text style={styles.inputText}>Coffee Process</Text>
             <View style={styles.editButtonBox}>
-                <Pressable style={styles.AddButton} ><Text style={styles.buttonText}>Add</Text></Pressable>
-                <Pressable style={styles.DeleteButton} ><Text style={styles.buttonText}>Delete</Text></Pressable>
+                <Pressable style={styles.AddButton} onPress={navtoAddImage}><Text style={styles.buttonText}>Add</Text></Pressable>
+                <Pressable style={styles.DeleteButton} onPress={navtoDeleteImage}><Text style={styles.buttonText}>Delete</Text></Pressable>
             </View>
             <Text style={styles.inputText}>Recommend Menu</Text>
             <View style={styles.editButtonBox}>
-                <Pressable style={styles.AddButton} ><Text style={styles.buttonText}>Add</Text></Pressable>
-                <Pressable style={styles.DeleteButton} ><Text style={styles.buttonText}>Delete</Text></Pressable>
+                <Pressable style={styles.AddButton} onPress={navtoAddMenu}><Text style={styles.buttonText}>Add</Text></Pressable>
+                <Pressable style={styles.DeleteButton} onPress={navtoDeleteMenu}><Text style={styles.buttonText}>Delete</Text></Pressable>
             </View>
             <Text style={styles.inputText}>Coffee Bean</Text>
             <View style={styles.editButtonBox}>
-                <Pressable style={styles.AddButton} ><Text style={styles.buttonText}>Add</Text></Pressable>
-                <Pressable style={styles.DeleteButton} ><Text style={styles.buttonText}>Delete</Text></Pressable>
+                <Pressable style={styles.AddButton} onPress={navtoAddMenu}><Text style={styles.buttonText}>Add</Text></Pressable>
+                <Pressable style={styles.DeleteButton} onPress={navtoDeleteMenu}><Text style={styles.buttonText}>Delete</Text></Pressable>
             </View>
             <Text style={styles.inputText}>All Menu</Text>
             <View style={styles.editButtonBox}>
-                <Pressable style={styles.AddButton} ><Text style={styles.buttonText}>Add</Text></Pressable>
-                <Pressable style={styles.DeleteButton} ><Text style={styles.buttonText}>Delete</Text></Pressable>
+                <Pressable style={styles.AddButton} onPress={navtoAddMenu}><Text style={styles.buttonText}>Add</Text></Pressable>
+                <Pressable style={styles.DeleteButton} onPress={navtoDeleteMenu}><Text style={styles.buttonText}>Delete</Text></Pressable>
             </View>
             <Pressable style={styles.loginButton} onPress={navtoLogin}><Text style={styles.buttonText}>Save Information</Text></Pressable>
+            <Pressable><Text style={styles.cancelText} onPress={navtoLogin}>Cancel</Text></Pressable>
             
         </View>
         </ScrollView>   
@@ -159,5 +176,13 @@ const styles = StyleSheet.create({
         borderRadius:20,
         padding:10,
         margin:20,
-    }
+    },
+
+    cancelText: {
+      fontSize: 18,
+      fontWeight: "bold",
+      color: "#000",
+      marginTop:0,
+      alignSelf:"center",
+  },
 })

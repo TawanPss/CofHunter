@@ -38,12 +38,15 @@ const Home = ({navigation}) => {
         navigation.navigate('Blog1')
     }
 
+    const editProfile= () =>{
+        navigation.navigate('EditProfile')
+    }
+
 
     return (
     //<SafeAreaView style={styles.container}>
         <ScrollView style={{paddingBottom:30}}>
 
-        
         <View style={styles.HeaderBox}>
             <Text style={styles.HeaderNameText}>Hi ! Cof hunt , what cof you hunt today !</Text>
             <View style={styles.searchBox}>
@@ -54,9 +57,10 @@ const Home = ({navigation}) => {
                 
                 
             </View>
+            
         </View>
 
-        
+        <Pressable><Text style={styles.cancelText} onPress={editProfile}>Edit Profile</Text></Pressable>
 
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',marginTop:10, }}>
             <Text style={styles.HeaderText}>| Cof Recomment</Text>
@@ -477,6 +481,14 @@ const styles = StyleSheet.create({
       rowContainer: {
         flexDirection: 'row',
       },
+
+      cancelText: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "#000",
+        marginTop:0,
+        alignSelf:"center",
+    },
 
     
 });
