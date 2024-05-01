@@ -286,9 +286,9 @@ const Home = ({navigation}) => {
             </Pressable>
         </View>
 
-        <TouchableOpacity onPress={testapi} >
+        {/* <TouchableOpacity onPress={testapi} >
             <Text style={styles.menuText}></Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
           
     </ScrollView>
