@@ -81,11 +81,11 @@ const ReviewPage = () => {
           </View>
         </View>
           <Text style={styles.cafeNameText}>Factory Coffee</Text>
-          <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+          <View style={{ flexDirection: 'row', alignItems: 'center',marginLeft:10}}>
                 <Icon name="access-time" size={20} style={{marginTop:10,marginStart:25,marginEnd:1, color: "grey" }} />
                 <Text style={styles.openTimeText}>Open Fri - Mon 8.30-16.30</Text>
                 </View>
-          <View style={{flexDirection: 'row',alignItems: 'center',marginTop:5, }}>
+          <View style={{flexDirection: 'row',alignItems: 'center',marginTop:5,marginLeft:10 }}>
             <Icon name="location-on" size={20} style={{marginTop:10,marginStart:25,marginEnd:1, color: "grey" }} />
             <Text style={styles.openTimeText}>Phayathai Bangkok</Text>
           </View>
@@ -251,8 +251,8 @@ const styles = StyleSheet.create({
     //alignItems: 'center',
   },
   wrap: {
-    // marginStart:5,
-    // marginEnd:5,
+    marginLeft:8,
+    
     marginTop: 2,
     borderRadius:10,
     width: WIDTH*0.9,
@@ -274,10 +274,10 @@ const styles = StyleSheet.create({
   },
   cafeNameText: {
     marginStart:30,
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: "bold",
     color: "#8E5431",
-    marginTop:10,
+    marginTop:15,
     alignContent:"flex-start"
 },
 openTimeText:{
@@ -420,6 +420,27 @@ detailText: {
       marginStart:5,
       
   },
+  buttonBox:{
+    backgroundColor:"#8E5431",
+    width: 325,
+    height: 45,
+    marginTop:30,
+    marginBottom:10,
+    marginStart:25,
+    borderRadius:20,
+    paddingStart:111,
+    paddingTop:9,
+    
+  },
+  buttonText:{
+    fontSize: 13,
+    fontWeight: "bold",
+    color: "#fff",
+    marginTop:5,
+    
+  
+  },
+
 
 
 
